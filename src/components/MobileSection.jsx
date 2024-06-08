@@ -108,10 +108,10 @@ const MobileSection = () => {
   return (
     <>
       <div className="main h-full md:h-[90vh] min-w-80  w-full md:max-w-2/4 absolute md:w-[50vh] top-16  md:top-2 md:border-[1.5vh] flex  flex-col z-10 justify-end md:rounded-[6vh]   md:border-[#1D2A3F] md:outline md:outline-1 md:outline-offset-0 md:outline-white md:shadow-inner md:shadow-[#ffffffc1] mb-8">
-        <div className="content  h-2/3 md:rounded-b-3xl bg-white flex flex-col  items-center md:justify-end relative top-16   ">
+        <div className="content h-2/3  md:rounded-b-3xl bg-white flex flex-col  items-center md:justify-end relative top-0 md:top-16   ">
           <div
             ref={topRef}
-            className="chatbot-chat w-full bg-white md:rounded-b-3xl  py-1"
+            className="chatbot-chat  w-full bg-white md:rounded-b-3xl  py-1"
           >
             <div className="constantMobilePart">
               <div className="logoimage flex justify-center mt-[-8rem] lg:mt-[-11rem] z-30">

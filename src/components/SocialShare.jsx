@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const SocialShare = () => {
   return (
-    <div className="social-sharing   w-full border-black flex flex-col items-center gap-1 relative md:top-20 top-40  z-50">
+    <div className="social-sharing   w-full border-black flex flex-col items-center gap-1 relative md:top-20 top-[-9vh]  z-50">
       <div className="linksContainer gap-2 flex justify-center">
       <a href="http://youtube.com"target="_blank">
         <img className="h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.facebook} alt="" />
