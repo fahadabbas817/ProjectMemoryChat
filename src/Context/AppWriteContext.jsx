@@ -1,86 +1,99 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState,useCallback, useEffect, useContext } from "react";
 import { account } from "@/config/appwriteConfig";
 
-import { ID} from 'appwrite';
+import { ID } from "appwrite";
+import { toast } from "sonner";
 
-const AuthContext = createContext()
+const AuthContext = createContext();
 
-export const AuthProvider = ({children}) => {
-        
+export const AuthProvider = ({ children }) => {
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
-        const [loading, setLoading] = useState(true)
-        const [user, setUser] = useState(null)
 
-        useEffect(() => {
-            //setLoading(false)
-            // checkUserStatus()
-         }, [])
+  const loginUser = async (userInfo) => {
+    // console.log('userInfo',userInfo)
 
-         const loginUser = async (userInfo) => {
-            
+    try {
+      let response = await account.createEmailPasswordSession(
+        userInfo.email,
+        userInfo.password
+      );
+      let accountDetails = await account.get();
+      setUser(accountDetails);
+      console.log(user);
+    } catch (error) {
+      console.log(error.message)
+      toast.error(error.message)
+    }finally{
+      setUser(accountDetails);
+      toast.success(`Welcome ${user.name? user.name :""}`,{description:"Thanks for logging in Enoy sharing your precious memories"})
+    }
+  };
 
-            // console.log('userInfo',userInfo)
+  const logoutUser = async () => {
+    await account.deleteSession("current");
+    setUser(null);
+  };
 
-            try{
-                let response = await account.createEmailPasswordSession(userInfo.email, userInfo.password)
-                let accountDetails = await account.get();
-                setUser(accountDetails)
-                console.log(user)
-            }catch(error){
-                console.error(error)
-            }
-           
-            
-         }
+  const registerUser = async (userInfo) => {
+    
+    try {
+      let response = await account.create(
+        ID.unique(),
+        userInfo.email,
+        userInfo.password,
+        userInfo.username
+      );
 
-         const logoutUser = async () => {
-            await account.deleteSession('current');
-            setUser(null)
-         }
+      await account.createEmailPasswordSession(
+        userInfo.email,
+        userInfo.password
+      );
+      let accountDetails = await account.get();
+      setUser(accountDetails);
+      toast.success("Welcome! Thanks for signing Up")
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message)
+    }
 
-         const registerUser = async (userInfo) => {
-            setLoading(true)
+    
+  };
 
-            try{
-                
-                let response = await account.create(ID.unique(), userInfo.email, userInfo.password, userInfo.username);
-        
-                await account.createEmailPasswordSession(userInfo.email, userInfo.password)
-                let accountDetails = await account.get();
-                setUser(accountDetails)
-                
-            }catch(error){
-                console.error(error)
-            }
-        
-            setLoading(false)
-         }
+  const checkUserStatus = async () => {
+    
+    try {
+      let accountDetails = await account.get();
+      if(accountDetails){
+      setUser(accountDetails);
+    }
+    } catch (error) {
+        throw error
+    }
+  };
 
-         const checkUserStatus = async () => {
-            try{
-                let accountDetails = await account.get();
-                setUser(accountDetails)
-            }catch(error){
-                
-            }
-            setLoading(false)
-         }
+ 
 
-        const contextData = {
-            user,
-            loginUser,
-            logoutUser,
-            registerUser
-        }
+  const contextData = {
+    loading,
+    setLoading,
+    user,
+    setUser,
+    loginUser,
+    logoutUser,
+    registerUser,
+    checkUserStatus
+  };
 
-    return(
-        <AuthContext.Provider value={contextData}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
+  return (
+    <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
+  );
+};
 
 //Custom Hook
-export const useAuth = ()=> {return useContext(AuthContext)}
+export const useAuth = () => {
+  return useContext(AuthContext);
+};
 
 export default AuthContext;

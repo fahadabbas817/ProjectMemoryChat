@@ -1,0 +1,21 @@
+{
+    "lang": "中文",
+    "heroText": ["将 1000 份最珍贵的回忆装进口袋", "保存和分享家庭珍贵记忆的简单解决方案", "讲述和传承您的故事的终极工具"],
+    "infeelitIntoText": "嗨，我是 Infeelit - 您的助手，帮您留住和分享最珍贵的时刻",
+    "joinNow": "立即加入，享受独家抢先体验和奖励",
+    "meanwhileShare": "与此同时，分享您的美好回忆或珍贵时刻，并将其转化为独一无二的图像",
+    "placeholdertext": "让我们一起铭记珍贵时刻",
+    "terms": "条款和服务",
+    "privacy": "隐私政策",
+    "coming": "即将推出",
+    "days": "天",
+    "min": "分钟",
+    "hours": "小时",
+    "sec": "秒",
+    "getEarlyAccess": "抢先体验",
+    "enterEmail": "电子邮件",
+    "leftimg": "./src/assets/chineseLeftImg.png",
+    "rightimg": "./src/assets/chineseRightImg.png",
+    "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
+    "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+  }

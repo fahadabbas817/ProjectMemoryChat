@@ -1,5 +1,5 @@
 import { createContext, useState, useRef } from "react";
-import { pageData } from "@/assets/clientData";
+
 
 
 export const ChatContext = createContext();

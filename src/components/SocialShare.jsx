@@ -1,28 +1,33 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { useTranslation } from "react-i18next";
+
 
 const SocialShare = () => {
+  
+const {t} = useTranslation()
   return (
-    <div className="social-sharing   w-full border-black flex flex-col items-center gap-1 relative md:top-20 top-0  z-50">
+    // md:top-20 top-6
+    <div className="social-sharing h-24 lg:h-60 xl:h-80  w-full  bg-white flex flex-col  items-center gap-1">
       <div className="linksContainer gap-2 flex justify-center">
-      <a href="http://youtube.com"target="_blank">
-        <img className="h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.facebook} alt="" />
+      <a href="http://youtube.com" target="_blank">
+        <img className="h-8 md:h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.facebook} alt="" />
       </a>
      
       <a href="http://youtube.com"target="_blank">
-        <img className="h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.Instagram} alt="" />
+        <img className=" h-8 md:h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.Instagram} alt="" />
       </a>
      
       <a href="http://youtube.com"target="_blank">
-        <img className="h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.x_logo} alt="" />
+        <img className="h-8 md:h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.x_logo} alt="" />
       </a>
       <a href="http://youtube.com"target="_blank">
-        <img className="h-10 hover:translate-y-1   hover:border-teal-300 transition-all ease-in duration-150 cursor-pointer" src={assets.Tiktok} alt="" />
+        <img className="h-8 md:h-10 hover:translate-y-1   hover:border-teal-300 transition-all ease-in duration-150 cursor-pointer" src={assets.Tiktok} alt="" />
       </a>
       </div>
       <div className="terms_service text-xs flex  underline gap-4 ">
-      <a href="">Terms and Services</a>
-      <a href="">Privacy Policy</a>
+      <a href="">{t("terms")}</a>
+      <a href="">{t("privacy")}</a>
     </div>
     </div>
   );

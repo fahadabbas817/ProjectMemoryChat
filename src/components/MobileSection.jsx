@@ -1,259 +1,229 @@
-// import 'regenerator-runtime/runtime'
+
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { assets } from "../assets/assets";
-import { useMutation } from "@tanstack/react-query";
-import { fetchGemini } from "./GeminiApi";
-import { ThreeDots } from "react-loader-spinner";
-import autoAnimate from "@formkit/auto-animate";
 import { ChatContext } from "../Context/ChatContext";
 import SocialShare from "./SocialShare";
-import { Navigate } from "react-router-dom";
-import { pageData } from "@/assets/clientData";
 import Loader from "./Loader";
-
+import CountDown from "./CountDown";
+import { account } from "@/config/appwriteConfig";
+import { ID } from "appwrite";
+import { useTranslation } from "react-i18next";
+import { useAuth } from "@/Context/AppWriteContext";
+import { toast } from "sonner";
+import {z} from "zod"
 const MobileSection = () => {
-  const {selectedlanguage, pageLanguage, setselectedLanguage,featureRef,setPageLanguage} = useContext(ChatContext)
-
-
-  const [topics, setTopics] = useState(["Parent", "Teenager", "Hero"]);
+  const { t } = useTranslation();
+  const { selectedlanguage, pageLanguage, setPageLanguage} =
+  useContext(ChatContext);
+  
+  const {user,setUser,checkUserStatus} = useAuth()
+  
+  const [loading,setLoading] = useState(false)
   const [result, setResult] = useState("");
   const [prevPrompt, setPrevPrompt] = useState([]);
   const [recentPrompt, setRecentPrompt] = useState("");
   const [showImage, setshowImage] = useState(false);
-  const [responseCounter, setresponseCounter] = useState(0);
+  const [earlyAccessEmail, setEarlyAccessEmail] = useState("");
   const [prompt, setPrompt] = useState("");
+  const [errors, setErrors] = useState(null);
+ 
+  const emailSchema = z.string().trim().email("Enter Valid Email Please");
 
-  const bottomref = useRef(null);
-  const chattopref = useRef(null);
-  const topRef = useRef(null);
+ useEffect(()=>{
+  UrlSlugLogin();
+ },[])
+ 
 
-  useEffect(()=>{
-    const languageChanger=()=>{
-      const currentLanguage = pageData.find(lang => lang.lang === selectedlanguage)
-      setPageLanguage(currentLanguage)
-    }
-    languageChanger();  
-  },[selectedlanguage])
-
-
-  // useEffect(() => {
-  //   bottomref.current.scrollIntoView({ behavior: "smooth" });
-  //   savetoLocalStorage(prevPrompt)
-
-  // }, [prevPrompt]);
-
-  // useEffect(()=>{
-  //   let chatter = JSON.parse(localStorage.getItem('chatHistory'))
-  //   setPrevPrompt(chatter)
-  //   console.log(chatter)
-  //   // if(chatter && chatter.length>0){
-  //   //   // let storedData = JSON.parse(chatter)
-  //   // }
-  // },[])
-
-  useEffect(() => {
-    if (prevPrompt) {
-      chattopref.current && autoAnimate(chattopref.current);
-    }
-  }, [chattopref]);
-
-  // const savetoLocalStorage = (chatprops) => {
-  //   // const chatDataString = JSON.stringify(chatprops)
-  //   localStorage.setItem("chatHistory", JSON.stringify(chatprops));
-  //   console.log(localStorage);
-  // };
-  const scrollToFeatuer = () => {
-    featureRef.current.scrollIntoView({ behavior: "smooth" });
-    console.log("clicked");
-  };
-
-  const mutation = useMutation({
-    mutationFn: () => {
-      return fetchGemini(recentPrompt);
-    },
-    onSuccess: (data) =>
-      setPrevPrompt((prev) => [
-        ...prev,
-        {
-          isbot: true,
-          message: data,
-        },
-      ]),
-  });
-
-  const runChat = async (prompt) => {
-    if (prompt === "" || prompt === " ") {
-      return;
-    }
-    await Promise.resolve(
-      setPrevPrompt([
-        ...prevPrompt,
-        {
-          isbot: false,
-          message: prompt,
-        },
-      ])
-    );
-
-    setRecentPrompt(prompt);
-
-    setPrompt("");
-
-    mutation.mutate();
-    if (mutation.isError) {
-      console.log(mutation.error);
+  const magicUrlLogin = async (userEmail) => {
+    try {
+      setLoading(true)
+      const token = await account.createMagicURLToken(
+        ID.unique(),
+        userEmail,
+        "http://localhost:5173"
+      );
+      if(token){
+        toast.success("Sign In link sent",{
+          description:`A SignIn Link has been sent to your provided email address Click on that link to sign Up to infeelit`
+        })
+        
+      }
+    } catch (error) {
+      console.log(error);
+      setErrors(error);
+      toast.error(error.message,{duration:5000})
+    }finally{
+      setLoading(false)
     }
   };
+
+  const UrlSlugLogin = async () => {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const secret = urlParams.get("secret");
+      const userId = urlParams.get("userId");
+      if(secret && userId){
+      await account.createSession(userId, secret);
+      console.log("URlslug is working fine")
+    }
+    } catch (error) {
+      console.log(error);
+      setErrors(error);
+    }
+  };
+
+  const directEmailLogin = async (userEmail) => {
+    try {
+      setLoading(true)
+      const emailCheck = emailSchema.safeParse(userEmail);
+      if(emailCheck.success){
+        await magicUrlLogin(userEmail);
+
+      }else{
+        const formattedErrors = emailCheck.error.format();
+        setErrors(formattedErrors)
+        console.log(errors)
+        setLoading(false)
+      }
+          } catch (error) {
+      console.log(error);
+      setErrors(error);
+      toast.error(error.message)
+    }finally{
+      setLoading(false)
+    }
+  };
+  const handleDirectUrlLogin = async (e) => {
+    e.preventDefault();
+    directEmailLogin(earlyAccessEmail);
+  };
+ 
+ 
+  
+
+
 
   return (
     <>
-      <div className="main h-full md:h-[90vh] min-w-80  w-full md:max-w-2/4 absolute md:w-[50vh] top-16  md:top-2 md:border-[1.5vh] flex  flex-col z-10 justify-end md:rounded-[6vh]   md:border-[#1D2A3F] md:outline md:outline-1 md:outline-offset-0 md:outline-white md:shadow-inner md:shadow-[#ffffffc1] mb-8">
-        <div className="content h-2/3  md:rounded-b-3xl bg-white flex flex-col  items-center md:justify-end relative top-4 md:top-16   ">
+      <div className="main h-full md:h-[41rem] min-w-80  w-full md:max-w-96 max-h-[50rem]  md:absolute  md:w-[46rem] top-32 relative   md:top-2 md:border-8 flex  flex-col z-10 md:justify-end md:rounded-[3rem]    md:border-[#1D2A3F] md:outline md:outline-1 md:outline-offset-0 md:outline-white md:shadow-inner md:shadow-[#ffffffc1] md:overflow-hidden">
+        <div className="content md:h-2/3 h-2/4  md:rounded-b-3xl bg-white flex flex-col  items-center md:justify-end  top-0 md:top-0   ">
           <div
-            ref={topRef}
+            
             className="chatbot-chat  w-full bg-white md:rounded-b-3xl  py-1"
           >
-            <div className="constantMobilePart">
-              <div className="logoimage flex justify-center mt-[-11vh] lg:mt-[-11rem] z-30">
-                <img className="h-52 md:h-52 xl:h-60 " src={assets.Infeelit_image} alt="" />
+            <div className="constantMobilePart mx-2">
+              {/* mt-[-14vh] lg:mt-[-11rem] */}
+              <div className="logoimage flex justify-center mt-[-8rem] lg:mt-[-11rem]    z-30">
+                <img
+                  className="h-48 md:h-52 xl:h-60 "
+                  src={assets.Infeelit_image}
+                  alt=""
+                />
               </div>
-              <div className=" md:hidden youtube-thumbnails  flex mx-auto justify-center gap-8 my-1  ">
-                <img className="h-20" src={assets.thumbnail1} alt="" />
-                <img className="h-20" src={assets.thumbnail2} alt="" />
+              <div className="greetText my-2  text-xs  justify-center">
+                <p className="font-bold text-xs text-center">
+                  {/* {pageLanguage.infeelitIntoText} */}
+                  {t("infeelitIntoText")}
+                </p>
               </div>
 
-              <div
-                className={`EarlyAccessBtn ${
-                  prevPrompt.length !== 0 ? "flex" : "hidden"
-                } flex-col justify-center  items-center my-3 bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]  text-black w-max px-6 py-2  rounded-full cursor-pointer  mx-auto`}
-              >
-                <div className="EarlyAccessBtnText flex flex-col items-center justify-center gap-0 shadow-xl">
-                  <p className="font-extrabold">LAUNCHING JULY 26!</p>
-                  <p className="font-bold mt-[-0.3vw] text-sm ">
-                    GET EARLY ACCESS
-                  </p>
-                </div>
+              <div className=" md:hidden youtube-thumbnails  flex mx-auto justify-center gap-8 my-1  ">
+                <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("leftimg")} alt="" /></a>
+                <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("rightimg")} alt="" /></a>
               </div>
+              {prevPrompt.length !== 0 && (
+                <div className="EarlyAccessBtn  flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]   w-full px-5  py-1 my-2  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
+                  <div className="earlyAccesText text-black">
+                    <p className="font-bold ">{t("coming")}</p>
+                    <CountDown />
+                  </div>
+                  <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
+                    <input
+                      type="email"
+                      placeholder={t("enterEmail")}
+                      className="w-full border-2 border-gray-200  rounded-3xl px-2 py-1  outline-none focus:border-[#1896B0]"
+                    />
+                    
+                    <button
+                      onClick={(e) => handleDirectUrlLogin(e)}
+                      className="text center w-max bg-[#1896B0] text-white rounded-3xl  px-1 py-1 hover:bg-blue-700 transition-all duration-500"
+                    >
+                      {t("getEarlyAccess")}
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             {prevPrompt.length === 0 && (
               <div className="  related-Topics px-2">
-                <div className="greetText my-4 md:text-xs text-sm  justify-center">
-                  {/* <p className="text-center">
-                    Hi, I am Infeelit - Here to help you
-                  </p> */}
-                  <p className="font-bold  text-center">
-                    {pageLanguage.infeelitIntoText}
-                  </p>
+                <div className="earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4">
+                  <p>{t("joinNow")}</p>
                 </div>
-                <div className="EarlyAccessBtn flex flex-col justify-center  items-center bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]  text-black w-max px-6 py-2  rounded-full cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
-                  <div className="EarlyAccessBtnText flex flex-col items-center justify-center gap-0 ">
-                    <p className="font-extrabold">LAUNCHING JULY 26!</p>
-                    <p className="font-bold mt-[-0.3vw] text-sm ">
-                      GET EARLY ACCESS
-                    </p>
+                <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]   w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
+                  <div className="earlyAccesText text-black">
+                    <p className="font-bold ">{t("coming")}</p>
+                    <CountDown />
+                  </div>
+                  <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
+                    <input
+                      type="email"
+                      onChange={(e) =>{ setEarlyAccessEmail(e.target.value)
+                        setErrors({})
+                      }}
+                      placeholder={t("enterEmail")}
+                      
+                      className={`w-full border-2 border-gray-200  rounded-3xl px-2 py-1 outline-none focus:border-[#1896B0]`}
+                    />
+                     {errors? <p className="text-red-700 text-xs">{errors._errors}</p>:null}
+                    <button
+                      onClick={(e) => handleDirectUrlLogin(e)}
+                      disabled={loading}
+                      className="text center disabled:cursor-not-allowed w-max bg-[#1896B0] text-white rounded-3xl  px-1 py-1 hover:bg-blue-700 transition-all duration-500"
+                    >
+                      {loading?<Loader size="6" />:t("getEarlyAccess")}
+                    </button>
                   </div>
                 </div>
 
-                <div className="greetQuestion text-center md:text-sm my-4">
-                  <p className="text-[#1896B0] font-bold">
-                    What kind of memory would you <br /> like to relive today
-                  </p>
-                </div>
-
-                <div className="topic-container mx-auto w-72 flex flex-wrap justify-center gap-2   ">
-                  {topics.map((topic, i) => {
-                    return (
-                      <div
-                        key={i}
-                        onClick={() => runChat(topic)}
-                        className="scrollbuttonContent w-20  bg-[#1896B0] px-1 py-1  shadow-md rounded-2xl text-white flex text-xs justify-center cursor-pointer hover:bg-[#1871b0] transition ease-in duration-200"
-                      >
-                        <p>{topic}</p>
-                      </div>
-                    );
-                  })}
+                <div className="earlyaccessbottomText text-xs font-bold my-8 text-center  ">
+                  <p className="text-center">{t("meanwhileShare")}</p>
                 </div>
               </div>
             )}
-            <div
-              className={`chatbot-main ${
-                prevPrompt.length !== 0 ? "flex" : "hidden"
-              } h-40 overflow-y-scroll  flex flex-col mt-8 gap-4 `}
-              ref={chattopref}
-            >
-              {prevPrompt.map((items, i) => {
-                return (
-                  <div key={i} className=" main-chat  flex flex-col">
-                    <div
-                      className={`chat-question ease-in transition-all flex  gap-2 items-start px-2 py-1 ${
-                        items.isbot ? "bg-slate-100" : null
-                      }`}
-                    >
-                      <img
-                        className="h-6 "
-                        src={items.isbot ? assets.AI_response : assets.User}
-                        alt=""
-                      />
 
-                      <pre
-                        className={` whitespace-pre-wrap text-xs ${
-                          !items.isbot ? "font-medium  " : "font-normal"
-                        }`}
-                      >
-                        <span className="w-40 ">{items.message}</span>
-                      </pre>
-                    </div>
-                    {i === prevPrompt.length - 1 && (
-                    <Loader limit={mutation.isPending} />
-                    )}
-                    {i % 5 === 0 && i === prevPrompt.length - 1 && i !== 0 && (
-                      <span className="image-generation w-40  text-[#f3f3f3] bg-gradient-to-r from-[#449395] to-[#2cc3c8] text-center text-sm font-bold py-2 mx-2 mt-2 px-1 rounded-2xl">
-                        Generate Image
-                      </span>
-                    )}
-                    {mutation.isError ? (
-                      <div>An error occurred: {mutation.error.message}</div>
-                    ) : null}
-                  </div>
-                );
-              })}
-              <div
-                ref={bottomref}
-                className="bottom hidden border-2 h-2 border-red-600"
-              ></div>
-            </div>
-            
-              <div className="prompt-box mx-auto my-4   border-4 h-12 border-[#001C3C] w-80 flex items-center justify-between rounded-3xl ">
-                <div className="search mx-3">
-                  <input
-                    className="bg-transparent text-sm outline-none"
-                    value={prompt}
-                    type="text"
-                    placeholder="Enter the prompt here"
-                    name="input"
-                    id="input"
-                    onChange={(e) => setPrompt(e.target.value)}
-                    onKeyDown={(e) =>
-                      e.key == "Enter" ? runChat(prompt) : null
-                    }
-                  />
-                </div>
-                <div className="searchbar-image flex items-center mx-4">
-                  <img className="h-6 cursor-pointer hover:h-7 transition-all duration-150 ease-in" src={assets.record} alt="record" />
-                  <img
-                    className="h-6 cursor-pointer hover:h-7 transition-all duration-150 ease-in"
-                    onClick={() => runChat(prompt)}
-                    src={assets.send}
-                    alt="send"
-                  />
-                </div>
+            <div className="prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-96 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl ">
+              <div className="search ml-3">
+                <input
+                  className="bg-transparent text-sm outline-none w-52"
+                  value={prompt}
+                  type="text"
+                  placeholder={t("placeholdertext")}
+                  name="input"
+                  id="input"
+                  onChange={(e) => setPrompt(e.target.value)}
+                
+                />
               </div>
-           
+              <div className="searchbar-image flex mr-2 ">
+                <img
+                  className="h-6 cursor-pointer hover:h-7 transition-all duration-150 ease-in"
+                  src={assets.record}
+                  alt="record"
+                />
+                <img
+                  className="h-6 cursor-pointer hover:h-7 transition-all duration-150 ease-in"
+                  
+                  src={assets.send}
+                  alt="send"
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        <SocialShare />
+        <div className="socialShareContainer md:hidden">
+          <SocialShare />
+        </div>
       </div>
     </>
   );
