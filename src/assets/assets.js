@@ -14,13 +14,27 @@ import globe from './globe.png'
 import ask from './ask.svg'
 import Tiktok from './Tiktok.png'
 import Menu from './Menu.svg'
-import thumbnail1 from './thumbnail1.png'
-import thumbnail2 from './thumbnail2.png';
+import arabicLeftImg from './arabicLeftImg.png'
+import arabicLeftImg from './arabicLeftImg.png'
+import chineseLeftImg from './chineseLeftImg.png'
+import chineseRightImg from './chineseRightImg.png'
+import englishLeftImg from './englishLeftImg.png'
+import englishRightImg from './englishRightImg.png'
+import frenchLeftImg from './frenchLeftImg.png'
+import frenchRightImg from './frenchRightImg.png'
+import hindiLeftImg from './hindiLeftImg.png'
+import hindiRightImg from './hindiRightImg.png'
+import italianLeftImg from './italianLeftImg.png'
+import italianRightImg from './italianRightImg.png'
+import portugeseLeftImg from './portugeseLeftImg.png'
+import portugeseRightImg from './portugeseRightImg.png'
+import russianLeftImg from './russianLeftImg.png'
+import russianRightImg from './russianRightImg.png'
+import spanishLeftImg from './spanishLeftImg.png'
+import spanishRightImg from './spanishRightImg.png'
 
 
 export const assets={
-    thumbnail1,
-    thumbnail2,
     Menu,
     Tiktok,
     ask,
