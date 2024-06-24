@@ -1,7 +1,13 @@
 {
-    "lang": "Italiano",
-    "heroText": ["1000 dei tuoi ricordi più preziosi sempre con te", "Facile da conservare e condividere i ricordi preziosi della tua famiglia", "Lo strumento definitivo per raccontare e tramandare la tua storia"],
-   "infeelitIntoText": "Ciao, sono Infeelit - Il tuo assistente per immortalare e condividere i tuoi momenti più cari",
+  "code": "it",
+  "lang": "Italiano",
+
+  "heroText": [
+    "1000 dei tuoi ricordi più preziosi sempre con te",
+    "Facile da conservare e condividere i ricordi preziosi della tua famiglia",
+    "Lo strumento definitivo per raccontare e tramandare la tua storia"
+  ],
+  "infeelitIntoText": "Ciao, sono Infeelit - Il tuo assistente per immortalare e condividere i tuoi momenti più cari",
   "joinNow": "Iscriviti ora per accesso esclusivo e premi",
   "meanwhileShare": "Condividi un ricordo prezioso e vedilo trasformarsi in un'immagine unica",
   "placeholdertext": "Ricordiamo insieme i momenti più cari",
@@ -17,6 +23,5 @@
   "leftimg": "/thumbnails/italianLeftImg.png",
   "rightimg": "/thumbnails/italianRightImg.png",
   "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
-    "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
-  
-  }
+  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+}

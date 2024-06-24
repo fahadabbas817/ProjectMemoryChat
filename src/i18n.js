@@ -20,7 +20,7 @@ const resources = {
     es: { translation: spanish },
     ar: { translation: arabic },
     zh: { translation: Chinese },
-    pt: { translation: portugese },
+    pt: { translation: portugese }, 
     ru: { translation: Russian },
     it: { translation: italian }
   };

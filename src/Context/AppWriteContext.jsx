@@ -32,8 +32,14 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logoutUser = async () => {
-    await account.deleteSession("current");
-    setUser(null);
+    try {
+      await account.deleteSession("current");
+      setUser(null);
+      toast.success("Logout Successfull",{duration:1000})
+    } catch (error) {
+      toast.error(error.message || "There was some error while logging out")
+    }
+    
   };
 
   const registerUser = async (userInfo) => {
@@ -55,7 +61,7 @@ export const AuthProvider = ({ children }) => {
       toast.success("Welcome! Thanks for signing Up")
     } catch (error) {
       console.log(error);
-      toast.error(error.message)
+      throw error
     }
 
     

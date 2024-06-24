@@ -29,9 +29,7 @@ const MobileSection = () => {
  
   const emailSchema = z.string().trim().email("Enter Valid Email Please");
 
- useEffect(()=>{
-  UrlSlugLogin();
- },[])
+
  
 
   const magicUrlLogin = async (userEmail) => {
@@ -40,7 +38,7 @@ const MobileSection = () => {
       const token = await account.createMagicURLToken(
         ID.unique(),
         userEmail,
-        "http://localhost:5173/"
+        "https://project-memory-chat.vercel.app"
       );
       if(token){
         toast.success("Sign In link sent",{
@@ -57,24 +55,6 @@ const MobileSection = () => {
     }
   };
 
-  const UrlSlugLogin = async () => {
-    try {
-      const urlParams = new URLSearchParams(window.location.search);
-      const secret = urlParams.get("secret");
-      const userId = urlParams.get("userId");
-      if(secret && userId){
-      let accountDetails = await account.createSession(userId, secret);
-      if(accountDetails){
-      toast.success("Logged In successfully",{duration:2000}
-            )
-          }
-        setUser(accountDetails)
-    }
-    } catch (error) {
-      console.log(error);
-      setErrors(error);
-    }
-  };
 
   const directEmailLogin = async (userEmail) => {
     try {
@@ -125,7 +105,7 @@ const MobileSection = () => {
                   alt=""
                 />
               </div>
-              <div className="greetText my-2  text-xs  justify-center">
+              <div className="greetText md:my-6 lg:my-2  text-xs  justify-center">
                 <p className="font-bold text-xs text-center">
 
                   {t("infeelitIntoText")}
@@ -192,12 +172,12 @@ const MobileSection = () => {
                       disabled={loading}
                       className="text center disabled:cursor-not-allowed w-max bg-[#1896B0] text-white rounded-3xl  px-1 py-1 hover:bg-blue-700 transition-all duration-500"
                     >
-                      {loading?<Loader size="6" />:t("getEarlyAccess")}
+                      {loading?<Loader/>:t("getEarlyAccess")}
                     </button>
                   </div>
                 </div>
 
-                <div className="earlyaccessbottomText text-xs font-bold my-6 text-center  ">
+                <div className="earlyaccessbottomText text-xs font-bold my-6 md:my-8 text-center  ">
                   <span className="text-center min-w-80">{t("meanwhileShare")}</span>
                 </div>
               </div>

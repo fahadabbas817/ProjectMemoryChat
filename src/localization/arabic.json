@@ -1,24 +1,26 @@
-
 {
-    "lang": "العربية",
-    "heroText": ["1000 من ذكرياتك الثمينة دائمًا معك", "طريقة بسيطة للحفاظ على ذكريات عائلتك ومشاركتها", " الأداة المثالية لسرد قصتك ومشاركتها"],
-    "infeelitIntoText": " مرحبًا، أنا Infeelit - مساعدك لتوثيق ومشاركة لحظاتك المميزة",
-    "joinNow": "اشترك الآن للحصول على الوصول المبكر والمكافآت الحصرية",
-    "meanwhileShare": "في هذه الأثناء، شارك ذكرى مميزة وحولها إلى صورة فريدة",
-    "placeholdertext": "لنستذكر اللحظات المميزة",
-    "terms": " الشروط والأحكام",
-    "privacy": "سياسة الخصوصية",
-    "coming": "قريبًا",
-    "days": "يوم",
-    "min": "دقائق",
-    "hours": "ساعات",
-    "sec": "ثواني",
-    "getEarlyAccess": "تمتع بالوصول المبكر",
-    "enterEmail": "لبريد الإلكتروني",
-    "leftimg": "/thumbnails/arabicLeftImg.png",
-    "rightimg": "/thumbnails/arabicRightImg.png",
-    "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
-    "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
-
-
-  }
+  "lang": "العربية",
+  "code": "ar",
+  "heroText": [
+    "1000 من ذكرياتك الثمينة دائمًا معك",
+    "طريقة بسيطة للحفاظ على ذكريات عائلتك ومشاركتها",
+    " الأداة المثالية لسرد قصتك ومشاركتها"
+  ],
+  "infeelitIntoText": " مرحبًا، أنا Infeelit - مساعدك لتوثيق ومشاركة لحظاتك المميزة",
+  "joinNow": "اشترك الآن للحصول على الوصول المبكر والمكافآت الحصرية",
+  "meanwhileShare": "في هذه الأثناء، شارك ذكرى مميزة وحولها إلى صورة فريدة",
+  "placeholdertext": "لنستذكر اللحظات المميزة",
+  "terms": " الشروط والأحكام",
+  "privacy": "سياسة الخصوصية",
+  "coming": "قريبًا",
+  "days": "يوم",
+  "min": "دقائق",
+  "hours": "ساعات",
+  "sec": "ثواني",
+  "getEarlyAccess": "تمتع بالوصول المبكر",
+  "enterEmail": "لبريد الإلكتروني",
+  "leftimg": "/thumbnails/arabicLeftImg.png",
+  "rightimg": "/thumbnails/arabicRightImg.png",
+  "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
+  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+}

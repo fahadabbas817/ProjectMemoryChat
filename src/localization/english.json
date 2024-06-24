@@ -1,22 +1,26 @@
-
 {
-    "lang": "English",
-    "heroText": ["1000’s of your most precious memories in your pocket", "An easy solution to preserve and share your family's treasured memories", "The ultimate tool to tell and pass on your story"],
-    "infeelitIntoText": "Hi, I am Infeelit - Your assistant for immortalizing and sharing your most cherished moments",
-    "joinNow": "Join Now for Early Access and Rewards",
-    "meanwhileShare": "Meanwhile Share a heartfelt memory or a treasured moment and see it transformed into a unique image",
-    "placeholdertext": "Let's Remember Cherished Moments",
-    "terms": "Terms and Services",
-    "privacy": "Privacy Policy",
-    "coming": "Coming Soon",
-    "days": "Day",
-    "min": "Minutes",
-    "hours": "Hours",
-    "sec": "Seconds",
-    "getEarlyAccess": "Get Early Access",
-    "enterEmail": "Enter Email",
-    "leftimg": "/thumbnails/englishLeftImg.png",
-    "rightimg": "/thumbnails/englishRightImg.png",
-    "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
-    "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
-  }
+  "code": "en",
+  "lang": "English",
+  "heroText": [
+    "1000’s of your most precious memories in your pocket",
+    "An easy solution to preserve and share your family's treasured memories",
+    "The ultimate tool to tell and pass on your story"
+  ],
+  "infeelitIntoText": "Hi, I am Infeelit - Your assistant for immortalizing and sharing your most cherished moments",
+  "joinNow": "Join Now for Early Access and Rewards",
+  "meanwhileShare": "Meanwhile Share a heartfelt memory or a treasured moment and see it transformed into a unique image",
+  "placeholdertext": "Let's Remember Cherished Moments",
+  "terms": "Terms and Services",
+  "privacy": "Privacy Policy",
+  "coming": "Coming Soon",
+  "days": "Day",
+  "min": "Minutes",
+  "hours": "Hours",
+  "sec": "Seconds",
+  "getEarlyAccess": "Get Early Access",
+  "enterEmail": "Enter Email",
+  "leftimg": "/thumbnails/englishLeftImg.png",
+  "rightimg": "/thumbnails/englishRightImg.png",
+  "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
+  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+}

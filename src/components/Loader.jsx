@@ -1,10 +1,10 @@
 import React from "react";
 import { PulseLoader } from "react-spinners";
 
-const Loader = (props) => {
+const Loader = () => {
   return (
     <div className="mx-auto">
-      <PulseLoader size={props.size} color={props.color} />
+      <PulseLoader size="5px" />
     </div>
   );
 };

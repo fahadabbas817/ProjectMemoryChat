@@ -1,21 +1,27 @@
- {
-    "lang": "'हिन्दी'",
-    "heroText": ["आपकी 1000 सबसे कीमती यादें आपके जेब में", "आपके परिवार की अनमोल यादों को संजोने और साझा करने का आसान तरीका", "अपनी कहानी बताने और आगे बढ़ाने का बेहतरीन साधन"],
-    "infeelitIntoText": "नमस्ते, मैं Infeelit हूँ - आपके सबसे प्रिय क्षणों को अमर बनाने और साझा करने के लिए आपका सहायक",
-    "joinNow": "अभी शामिल हों और एक्सक्लूसिव एक्सेस और रिवॉर्ड्स पाएं",
-    "meanwhileShare": "इस बीच, एक प्रिय स्मृति या अनमोल पल साझा करें और इसे एक अनोखी छवि में बदलते देखें",
-    "placeholdertext": "आइए हम प्यारे पलों को याद करें",
-    "terms": "नियम और शर्तें",
-    "privacy": "गोपनीयता नीति",
-    "coming": "जल्द ही आ रहा है",
-    "days": "दिन",
-    "min": "मिनट",
-    "hours": "घंटे",
-    "sec": "सेकंड",
-    "getEarlyAccess": "प्रारंभिक एक्सेस प्राप्त करें",
-    "enterEmail": "ईमेल",
-    "leftimg": "/thumbnails/hindiLeftImg.png",
-    "rightimg": "/thumbnails/hindiRightImg.png",
-    "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
-    "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
-  }
+{
+  "code": "hi",
+  "lang": "'हिन्दी'",
+
+  "heroText": [
+    "आपकी 1000 सबसे कीमती यादें आपके जेब में",
+    "आपके परिवार की अनमोल यादों को संजोने और साझा करने का आसान तरीका",
+    "अपनी कहानी बताने और आगे बढ़ाने का बेहतरीन साधन"
+  ],
+  "infeelitIntoText": "नमस्ते, मैं Infeelit हूँ - आपके सबसे प्रिय क्षणों को अमर बनाने और साझा करने के लिए आपका सहायक",
+  "joinNow": "अभी शामिल हों और एक्सक्लूसिव एक्सेस और रिवॉर्ड्स पाएं",
+  "meanwhileShare": "इस बीच, एक प्रिय स्मृति या अनमोल पल साझा करें और इसे एक अनोखी छवि में बदलते देखें",
+  "placeholdertext": "आइए हम प्यारे पलों को याद करें",
+  "terms": "नियम और शर्तें",
+  "privacy": "गोपनीयता नीति",
+  "coming": "जल्द ही आ रहा है",
+  "days": "दिन",
+  "min": "मिनट",
+  "hours": "घंटे",
+  "sec": "सेकंड",
+  "getEarlyAccess": "प्रारंभिक एक्सेस प्राप्त करें",
+  "enterEmail": "ईमेल",
+  "leftimg": "/thumbnails/hindiLeftImg.png",
+  "rightimg": "/thumbnails/hindiRightImg.png",
+  "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
+  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+}

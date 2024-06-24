@@ -4,16 +4,14 @@ import { z } from "zod";
 import { useAuth } from "@/Context/AppWriteContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { PulseLoader } from "react-spinners";
+
+import Loader from "@/components/Loader";
 const Login = () => {
   const {
     user,
-    setUser,
     loading,
     setLoading,
     loginUser,
-    logoutUser,
-    registerUser,
     checkUserStatus,
   } = useAuth();
   const [logindata, setLogindata] = useState({
@@ -61,6 +59,7 @@ const Login = () => {
     if (user) {
       console.log("User to mil rha hy ab", user);
       toast.success(`"Thanks for logging in" ${user.name}`, { duration: 2000 });
+      toast.success(`Welcome ${user.name?user.name:""}`,{description:"Welcome to infeelit, Here you can Share you most prestegious memories" ,duration:3000})
       setTimeout(() => navigate("/ "), 2000);
     }
     setLoading(false);
@@ -132,7 +131,7 @@ const Login = () => {
             disabled={loading}
             className="block w-full disabled:cursor-not-allowed bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] hover:bg-yellow-300 p-4 rounded hover:translate-y-1 hover:text-lg transition-all duration-300 ease-in cursor-pointer "
           >
-            {loading ? <PulseLoader /> : <p>Login</p>}
+            {loading ? <Loader/> : <p>Login</p>}
           </button>
         </form>
       </div>
