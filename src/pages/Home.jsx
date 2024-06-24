@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(()=>{
     if(user){
     setUser(user)
-    toast.success(`Welcome ${user.name}`,{description:"Welcome to infeelit, Here you can Share you most prestegious memories"})
+    toast.success(`Welcome ${user.name?user.name:""}`,{description:"Welcome to infeelit, Here you can Share you most prestegious memories"})
     console.log(user)}
   },[user])
   return (

@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       toast.error(error.message)
     }finally{
       setUser(accountDetails);
-      toast.success(`Welcome ${user.name? user.name :""}`,{description:"Thanks for logging in Enoy sharing your precious memories"})
+      toast.success(`Welcome ${user.name?user.name :""}`,{description:"Thanks for logging in Enoy sharing your precious memories"})
     }
   };
 

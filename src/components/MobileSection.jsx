@@ -40,7 +40,7 @@ const MobileSection = () => {
       const token = await account.createMagicURLToken(
         ID.unique(),
         userEmail,
-        "https://project-memory-chat.vercel.app"
+        "http://localhost:5173/"
       );
       if(token){
         toast.success("Sign In link sent",{
@@ -63,11 +63,12 @@ const MobileSection = () => {
       const secret = urlParams.get("secret");
       const userId = urlParams.get("userId");
       if(secret && userId){
-      await account.createSession(userId, secret);
-      setTimeout(()=>{
-        toast.loading("Logging you in ")
-      },2000)
-      toast.success("Logged In successfully",{duration:2000})
+      let accountDetails = await account.createSession(userId, secret);
+      if(accountDetails){
+      toast.success("Logged In successfully",{duration:2000}
+            )
+          }
+        setUser(accountDetails)
     }
     } catch (error) {
       console.log(error);
@@ -99,6 +100,7 @@ const MobileSection = () => {
   const handleDirectUrlLogin = async (e) => {
     e.preventDefault();
     directEmailLogin(earlyAccessEmail);
+    setEarlyAccessEmail("")
   };
  
  
@@ -171,6 +173,12 @@ const MobileSection = () => {
                   <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
                     <input
                       type="email"
+                      value={earlyAccessEmail}
+                      onKeyDown={(e)=>{
+                        if(e.key==="Enter"){
+                          handleDirectUrlLogin(e)
+                        }
+                      }}
                       onChange={(e) =>{ setEarlyAccessEmail(e.target.value)
                         setErrors({})
                       }}
@@ -189,8 +197,8 @@ const MobileSection = () => {
                   </div>
                 </div>
 
-                <div className="earlyaccessbottomText text-xs font-bold my-8 text-center  ">
-                  <p className="text-center">{t("meanwhileShare")}</p>
+                <div className="earlyaccessbottomText text-xs font-bold my-6 text-center  ">
+                  <span className="text-center min-w-80">{t("meanwhileShare")}</span>
                 </div>
               </div>
             )}
