@@ -40,7 +40,7 @@ const MobileSection = () => {
       const token = await account.createMagicURLToken(
         ID.unique(),
         userEmail,
-        "http://localhost:5173"
+        "https://project-memory-chat.vercel.app"
       );
       if(token){
         toast.success("Sign In link sent",{
@@ -64,7 +64,10 @@ const MobileSection = () => {
       const userId = urlParams.get("userId");
       if(secret && userId){
       await account.createSession(userId, secret);
-      console.log("URlslug is working fine")
+      setTimeout(()=>{
+        toast.loading("Logging you in ")
+      },2000)
+      toast.success("Logged In successfully",{duration:2000})
     }
     } catch (error) {
       console.log(error);
@@ -122,7 +125,7 @@ const MobileSection = () => {
               </div>
               <div className="greetText my-2  text-xs  justify-center">
                 <p className="font-bold text-xs text-center">
-                  {/* {pageLanguage.infeelitIntoText} */}
+
                   {t("infeelitIntoText")}
                 </p>
               </div>
@@ -160,7 +163,7 @@ const MobileSection = () => {
                 <div className="earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4">
                   <p>{t("joinNow")}</p>
                 </div>
-                <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]   w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
+                <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
                   <div className="earlyAccesText text-black">
                     <p className="font-bold ">{t("coming")}</p>
                     <CountDown />
@@ -192,7 +195,7 @@ const MobileSection = () => {
               </div>
             )}
 
-            <div className="prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-96 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl ">
+            <div className="prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-72 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl ">
               <div className="search ml-3">
                 <input
                   className="bg-transparent text-sm outline-none w-52"

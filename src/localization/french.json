@@ -14,8 +14,8 @@
     "sec": "Secondes",
     "getEarlyAccess": "Envoyer",
     "enterEmail": "Adresse Email",
-    "leftimg": "./src/assets/frenchLeftImg.png",
-    "rightimg": "./src/assets/frenchRightImg.png",
+    "leftimg": "/thumbnails/frenchLeftImg.png",
+    "rightimg": "/thumbnails/frenchLeftImg.png",
     "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   }

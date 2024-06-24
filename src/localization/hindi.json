@@ -14,8 +14,8 @@
     "sec": "सेकंड",
     "getEarlyAccess": "प्रारंभिक एक्सेस प्राप्त करें",
     "enterEmail": "ईमेल",
-    "leftimg": "./src/assets/hindiLeftImg.png",
-    "rightimg": "./src/assets/hindiRightImg.png",
+    "leftimg": "/thumbnails/hindiLeftImg.png",
+    "rightimg": "/thumbnails/hindiRightImg.png",
     "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   }

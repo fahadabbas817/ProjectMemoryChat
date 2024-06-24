@@ -15,8 +15,8 @@
     "sec": "ثواني",
     "getEarlyAccess": "تمتع بالوصول المبكر",
     "enterEmail": "لبريد الإلكتروني",
-    "leftimg": "./src/assets/arabicLeftImg.png",
-    "rightimg": "./src/assets/arabicRightImg.png",
+    "leftimg": "/thumbnails/arabicLeftImg.png",
+    "rightimg": "/thumbnails/arabicRightImg.png",
     "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
 

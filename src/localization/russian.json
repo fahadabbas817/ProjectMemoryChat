@@ -14,8 +14,8 @@
     "sec": "Секунды",
     "getEarlyAccess": "Получите преддоступ",
     "enterEmail": "Электронная почта",
-    "leftimg": "./src/assets/russianLeftImg.png",
-    "rightimg": "./src/assets/russianRightImg.png",
+    "leftimg": "/thumbnails/russianLeftImg.png",
+    "rightimg": "/thumbnails/russianRightImg.png",
     "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   }

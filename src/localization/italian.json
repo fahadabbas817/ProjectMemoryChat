@@ -14,8 +14,8 @@
   "sec": "Secondi",
   "getEarlyAccess": "Accedi ora",
   "enterEmail": "Email",
-  "leftimg": "./src/assets/italianLeftImg.png",
-  "rightimg": "./src/assets/italianRightImg.png",
+  "leftimg": "/thumbnails/italianLeftImg.png",
+  "rightimg": "/thumbnails/italianRightImg.png",
   "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   

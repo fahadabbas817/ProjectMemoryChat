@@ -12,8 +12,9 @@ import Russian from '@/localization/russian.json'
 import Chinese from '@/localization/chinese.json'
 import spanish from '@/localization/spanish.json'
 
+
 const resources = {
-    en: { translation: english },
+    en: { translation: english},
     fr: { translation: french },
     hi: { translation: hindi },
     es: { translation: spanish },

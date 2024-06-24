@@ -14,8 +14,8 @@
     "sec": "Segundos",
     "getEarlyAccess": "Unirse",
     "enterEmail": "Ingresa tu email aqui",
-    "leftimg": "./src/assets/spanishLeftImg.png",
-    "rightimg": "./src/assets/spanishRightImg.png",
+    "leftimg": "/thumbnails/spanishLeftImg.png",
+    "rightimg": "/thumbnails/spanishRightImg.png",
     "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   }

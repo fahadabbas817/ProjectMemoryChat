@@ -15,8 +15,8 @@
     "sec": "Seconds",
     "getEarlyAccess": "Get Early Access",
     "enterEmail": "Enter Email",
-    "leftimg": "./src/assets/englishLeftImg.png",
-    "rightimg": "./src/assets/englishRightImg.png",
+    "leftimg": "/thumbnails/englishLeftImg.png",
+    "rightimg": "/thumbnails/englishRightImg.png",
     "leftImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV ",
     "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
   }
