@@ -97,7 +97,7 @@ const MobileSection = () => {
             className="chatbot-chat  w-full bg-white md:rounded-b-3xl  py-1"
           >
             <div className="constantMobilePart mx-2">
-              {/* mt-[-14vh] lg:mt-[-11rem] */}
+             
               <div className="logoimage flex justify-center mt-[-8rem] lg:mt-[-11rem]    z-30">
                 <img
                   className="h-48 md:h-52 xl:h-60 "
@@ -116,13 +116,13 @@ const MobileSection = () => {
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("leftimg")} alt="" /></a>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("rightimg")} alt="" /></a>
               </div>
-              {prevPrompt.length !== 0 && (
+              {/* {prevPrompt.length !== 0 && (
                 <div className="EarlyAccessBtn  flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]   w-full px-5  py-1 my-2  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
-                  <div className="earlyAccesText text-black">
-                    <p className="font-bold ">{t("coming")}</p>
-                    <CountDown />
+                   <div className="earlyAccesText mt-2 text-black">
+                    <p className=" launchDate font-bold text-white">{t("coming")}</p>
+                    <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
                   </div>
-                  <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
+                  <div className="getEarlyEmailSection text-center flex flex-col items-center w-20   text-xs gap-1  ">
                     <input
                       type="email"
                       placeholder={t("enterEmail")}
@@ -137,7 +137,7 @@ const MobileSection = () => {
                     </button>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
 
             {prevPrompt.length === 0 && (
@@ -151,7 +151,7 @@ const MobileSection = () => {
                     <p className=" launchDate font-bold text-white">{t("coming")}</p>
                     <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
                   </div>
-                  <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
+                  <div className="getEarlyEmailSection w-1/2 text-center flex flex-col items-center text-xs gap-1  ">
                     <input
                       type="email"
                       value={earlyAccessEmail}
