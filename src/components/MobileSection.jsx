@@ -143,12 +143,13 @@ const MobileSection = () => {
             {prevPrompt.length === 0 && (
               <div className="  related-Topics px-2">
                 <div className="earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4">
-                  <p>{t("joinNow")}</p>
+                  <p className="">{t("joinNow")}</p>
                 </div>
                 <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
-                  <div className="earlyAccesText text-black">
-                    <p className="font-bold ">{t("coming")}</p>
-                    <CountDown />
+                
+                  <div className="earlyAccesText mt-2 text-black">
+                    <p className=" launchDate font-bold text-white">{t("coming")}</p>
+                    <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
                   </div>
                   <div className="getEarlyEmailSection text-center flex flex-col items-center text-xs gap-1  ">
                     <input

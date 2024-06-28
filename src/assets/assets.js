@@ -14,11 +14,11 @@ import globe from './globe.png'
 import ask from './ask.svg'
 import Tiktok from './Tiktok.png'
 import Menu from './Menu.svg'
-
+import LaunchDate from './LaunchDate.png'
 
 
 export const assets={
-  
+    LaunchDate,  
     Menu,
     Tiktok,
     ask,
