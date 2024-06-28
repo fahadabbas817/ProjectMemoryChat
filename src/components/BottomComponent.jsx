@@ -7,7 +7,7 @@ const BottomComponent = () => {
   const { t } = useTranslation();
 
   return (
-    // md:min-h-[calc(100vh-50vh)]
+    
     <div className="bottomComponent md:h-[21rem]   hidden w-full relative z-0 bg-white md:flex flex-col">
       <div className="youtube-videos md:flex hidden lg:flex-row gap-8 lg:gap-0  md:mb-0 mb-64 mt-24   justify-between  items-center ">
         <div className="first-vid  lg:w-72 xl:w-80 lg:mx-8 xl:mx-20 w-52 2xl:w-96 2xl:mx-6 rounded-xl   flex flex-col items-start cursor-pointer">

@@ -1,88 +1,16 @@
 
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
-import { ChatContext } from "../Context/ChatContext";
+
 import SocialShare from "./SocialShare";
-import Loader from "./Loader";
-import CountDown from "./CountDown";
-import { account } from "@/config/appwriteConfig";
-import { ID } from "appwrite";
+
 import { useTranslation } from "react-i18next";
-import { useAuth } from "@/Context/AppWriteContext";
-import { toast } from "sonner";
-import {z} from "zod"
+
+
+import CaptureEmail from "./CaptureEmail";
 const MobileSection = () => {
   const { t } = useTranslation();
-  const { selectedlanguage, pageLanguage, setPageLanguage} =
-  useContext(ChatContext);
-  
-  const {user,setUser,checkUserStatus} = useAuth()
-  
-  const [loading,setLoading] = useState(false)
-  const [result, setResult] = useState("");
-  const [prevPrompt, setPrevPrompt] = useState([]);
-  const [recentPrompt, setRecentPrompt] = useState("");
-  const [showImage, setshowImage] = useState(false);
-  const [earlyAccessEmail, setEarlyAccessEmail] = useState("");
-  const [prompt, setPrompt] = useState("");
-  const [errors, setErrors] = useState(null);
- 
-  const emailSchema = z.string().trim().email("Enter Valid Email Please");
-
-
- 
-
-  const magicUrlLogin = async (userEmail) => {
-    try {
-      setLoading(true)
-      const token = await account.createMagicURLToken(
-        ID.unique(),
-        userEmail,
-        "https://project-memory-chat.vercel.app"
-      );
-      if(token){
-        toast.success("Sign In link sent",{
-          description:`A SignIn Link has been sent to your provided email address Click on that link to sign Up to infeelit`
-        })
-        
-      }
-    } catch (error) {
-      console.log(error);
-      setErrors(error);
-      toast.error(error.message,{duration:5000})
-    }finally{
-      setLoading(false)
-    }
-  };
-
-
-  const directEmailLogin = async (userEmail) => {
-    try {
-      setLoading(true)
-      const emailCheck = emailSchema.safeParse(userEmail);
-      if(emailCheck.success){
-        await magicUrlLogin(userEmail);
-
-      }else{
-        const formattedErrors = emailCheck.error.format();
-        setErrors(formattedErrors)
-        console.log(errors)
-        setLoading(false)
-      }
-          } catch (error) {
-      console.log(error);
-      setErrors(error);
-      toast.error(error.message)
-    }finally{
-      setLoading(false)
-    }
-  };
-  const handleDirectUrlLogin = async (e) => {
-    e.preventDefault();
-    directEmailLogin(earlyAccessEmail);
-    setEarlyAccessEmail("")
-  };
- 
+ const [prompt, setPrompt] = useState("")
  
   
 
@@ -105,7 +33,7 @@ const MobileSection = () => {
                   alt=""
                 />
               </div>
-              <div className="greetText md:my-6 lg:my-2  text-xs  justify-center">
+              <div className="greetText md:my-6 lg:my-2 my-1  text-xs  justify-center">
                 <p className="font-bold text-xs text-center">
 
                   {t("infeelitIntoText")}
@@ -116,73 +44,19 @@ const MobileSection = () => {
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("leftimg")} alt="" /></a>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("rightimg")} alt="" /></a>
               </div>
-              {/* {prevPrompt.length !== 0 && (
-                <div className="EarlyAccessBtn  flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18]   w-full px-5  py-1 my-2  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
-                   <div className="earlyAccesText mt-2 text-black">
-                    <p className=" launchDate font-bold text-white">{t("coming")}</p>
-                    <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
-                  </div>
-                  <div className="getEarlyEmailSection text-center flex flex-col items-center w-20   text-xs gap-1  ">
-                    <input
-                      type="email"
-                      placeholder={t("enterEmail")}
-                      className="w-full border-2 border-gray-200  rounded-3xl px-2 py-1  outline-none focus:border-[#1896B0]"
-                    />
-                    
-                    <button
-                      onClick={(e) => handleDirectUrlLogin(e)}
-                      className="text center w-max bg-[#1896B0] text-white rounded-3xl  px-1 py-1 hover:bg-blue-700 transition-all duration-500"
-                    >
-                      {t("getEarlyAccess")}
-                    </button>
-                  </div>
-                </div>
-              )} */}
+      
             </div>
 
-            {prevPrompt.length === 0 && (
-              <div className="  related-Topics px-2">
+              <div className=" mobileTextSection px-2">
                 <div className="earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4">
                   <p className="">{t("joinNow")}</p>
                 </div>
-                <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
-                
-                  <div className="earlyAccesText mt-2 text-black">
-                    <p className=" launchDate font-bold text-white">{t("coming")}</p>
-                    <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
-                  </div>
-                  <div className="getEarlyEmailSection w-1/2 text-center flex flex-col items-center text-xs gap-1  ">
-                    <input
-                      type="email"
-                      value={earlyAccessEmail}
-                      onKeyDown={(e)=>{
-                        if(e.key==="Enter"){
-                          handleDirectUrlLogin(e)
-                        }
-                      }}
-                      onChange={(e) =>{ setEarlyAccessEmail(e.target.value)
-                        setErrors({})
-                      }}
-                      placeholder={t("enterEmail")}
-                      
-                      className={`w-full border-2 border-gray-200  rounded-3xl px-2 py-1 outline-none focus:border-[#1896B0]`}
-                    />
-                     {errors? <p className="text-red-700 text-xs">{errors._errors}</p>:null}
-                    <button
-                      onClick={(e) => handleDirectUrlLogin(e)}
-                      disabled={loading}
-                      className="text center disabled:cursor-not-allowed w-max bg-[#1896B0] text-white rounded-3xl  px-1 py-1 hover:bg-blue-700 transition-all duration-500"
-                    >
-                      {loading?<Loader/>:t("getEarlyAccess")}
-                    </button>
-                  </div>
-                </div>
+                <CaptureEmail/>
 
                 <div className="earlyaccessbottomText text-xs font-bold my-6 md:my-8 text-center  ">
                   <span className="text-center min-w-80">{t("meanwhileShare")}</span>
                 </div>
               </div>
-            )}
 
             <div className="prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-72 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl ">
               <div className="search ml-3">
