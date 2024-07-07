@@ -82,7 +82,7 @@ const RegisterForm = () => {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        "api-key":import.meta.env.VITE_BREVO_API_KEY,
+        "api-key":'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',
       },
       body: JSON.stringify({
         attributes: {
