@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="Nav-left flex gap-16 mx-3 items-center ">
         <img className="h-10 md:h-16 mx-3 md:mx-5 " src={assets.Logo} alt="Infeelit" />
       </div>
-      <div className="nav-right items-center gap-8 flex mr-6 md:mx-12 ">
+      <div className="nav-right items-center gap-8 flex md:mr-20 mr-6 md:mx-12 ">
         <div className="flag-dropdown  relative flex  gap-1 cursor-pointer text-white transition-all duration-200 ease-in ">
           <div
             onClick={() => {

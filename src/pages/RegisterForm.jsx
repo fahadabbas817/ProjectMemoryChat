@@ -3,6 +3,7 @@ import { z } from "zod";
 import { useNavigate} from "react-router-dom";
 import { toast } from "sonner";
 import Loader from "@/components/Loader";
+import axios from "axios";
 
 const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
@@ -78,13 +79,14 @@ const RegisterForm = () => {
   
   const createBrevoContact = async (userinfo) => {
     const options = {
-      method: "POST",
+      method: 'POST',
+      url: 'https://api.brevo.com/v3/contacts/doubleOptinConfirmation',
       headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-        "api-key":import.meta.env.VITE_BREVO_API_KEY,
+        accept: 'application/json',
+        'content-type': 'application/json',
+        'api-key': import.meta.env.VITE_BREVO_API_KEY,
       },
-      body: JSON.stringify({
+      data: {
         attributes: {
           COUNTRY: userinfo.country,
           AGE: userinfo.age,
@@ -94,26 +96,25 @@ const RegisterForm = () => {
         updateEnabled: false,
         email: userinfo.email,
         templateId: 1,
-        redirectionUrl: "http://localhost:5173",
+        redirectionUrl: 'https://project-memory-chat.vercel.app',
         includeListIds: [2],
-      }),
+      },
     };
+  
     try {
-      const response = await fetch(
-        "https://api.brevo.com/v3/contacts/doubleOptinConfirmation",
-        options
-      );
-      if (!response.ok) {
-        const errorResponse = await response.json();
-        console.log(errorResponse)  
-        throw new Error(errorResponse.message || "Failed to create contact");
-      }
-      const data = await response.json();
-      console.log(data)
-      return data;
+      const response = await axios(options);
+      console.log(response.data);
+      return response.data;
     } catch (error) {
-      toast.error(error.message);
-      throw error;
+      if (error.response) {
+        const errorResponse = error.response.data;
+        console.log(errorResponse);
+          toast.error(errorResponse.message || 'Failed to create contact');
+          throw new Error(errorResponse.message || 'Failed to create contact');
+      } else {
+        toast.error(error.message);
+        throw error;
+      }
     }
   };
 
@@ -145,13 +146,13 @@ const RegisterForm = () => {
         await createBrevoContact(signupData);
         console.log("Form submitted successfully", result.data);
         toast.success(
-          "A confirmation Email has been sent to your specified Email Address Click on the link to confirm Your Regisration",
+          "Verify Your Email",
           {
-            duration: 2000,
+            description:"A Confirmation Link has been sent to your specified Email Address Click on this link to Complete Your Registration"
           }
         );
         setLoading(false);
-        setTimeout(() => navigate("/"), 2000);
+        setTimeout(() => navigate("/"), 4000);
       } catch (error) {
         console.log(error);
         toast.error(
