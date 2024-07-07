@@ -23,7 +23,7 @@ const App = () => {
     <Router>
       <Routes>
     <Route exact path='/' element={<Home/>}  />
-    <Route exact path='/register' element={<RegisterForm/>}  />
+    <Route exact path='/register/' element={<RegisterForm/>}  />
     </Routes>
   </Router>
   

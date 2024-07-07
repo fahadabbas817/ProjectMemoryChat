@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState} from "react";
 import { z } from "zod";
 import { useNavigate} from "react-router-dom";
 import { toast } from "sonner";
 import Loader from "@/components/Loader";
 import axios from "axios";
+import { ChatContext } from "@/components/ChatContext";
 
 const RegisterForm = () => {
+ const {earlyAccessEmail} = useContext(ChatContext)
+ console.log(earlyAccessEmail)
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [signupData, setSignupData] = useState({
     name: "",
-    email: "",
+    email: earlyAccessEmail,
     age: null,
     children: null,
     country: "",
   });
   const [errors, setErrors] = useState({});
+
+  
  
   const countryList =  [
     // English-speaking countries
@@ -191,9 +196,10 @@ const RegisterForm = () => {
             <input
               onChange={(e) => {
                 setSignupData({ ...signupData, email: e.target.value });
-
+                
                 setErrors({});
               }}
+              value={signupData.email}
               type="email"
               
               className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-blue-500"

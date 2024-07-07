@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Loader from './Loader'
 import { z } from 'zod'
 import { toast } from 'sonner'
 
 import { useNavigate } from 'react-router-dom'
+import { ChatContext } from './ChatContext'
 
 const CaptureEmail = () => {
 
-    const [earlyAccessEmail, setEarlyAccessEmail] = useState("")
+const {earlyAccessEmail, setEarlyAccessEmail} = useContext(ChatContext)
+   
     const [errors, setErrors] = useState({})
     const [loading, setLoading] = useState(false)
     const {t} = useTranslation();
     const emailSchema = z.string().trim().email("Enter Valid Email Please");
     const navigate = useNavigate();
+    
   
   const handleDirectUrlLogin = async (e) => {
     e.preventDefault();
@@ -21,9 +24,9 @@ const CaptureEmail = () => {
     const emailCheck = emailSchema.safeParse(earlyAccessEmail);
         if(emailCheck.success){
           toast.success("Redirecting to Registeraton Form",{duration:1000})
-          setTimeout(()=> navigate(`/register`),1000)
+
+          setTimeout(()=> navigate(`/register`),2000)
           
-          setEarlyAccessEmail("")
           setLoading(false)
         }else{
           const formattedErrors = emailCheck.error.format();
