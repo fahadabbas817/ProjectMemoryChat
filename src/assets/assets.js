@@ -14,11 +14,17 @@ import globe from './globe.png'
 import ask from './ask.svg'
 import Tiktok from './Tiktok.png'
 import Menu from './Menu.svg'
-
+import Share from './Share.png'
+import whatsapp from './whatsapp.png'
+import telegram from './telegram.png'
 
 
 export const assets={
    
+    
+    telegram,
+    whatsapp,
+    Share,
     Menu,
     Tiktok,
     ask,

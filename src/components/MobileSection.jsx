@@ -1,20 +1,18 @@
 
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
-
 import SocialShare from "./SocialShare";
-
 import { useTranslation } from "react-i18next";
 
-
 import CaptureEmail from "./CaptureEmail";
+
 const MobileSection = () => {
   const { t } = useTranslation();
  const [prompt, setPrompt] = useState("")
+ const [toggleChat, settoggleChat] = useState(false)
+ const currentLanguageCode = t('code')
  
-  
-
-
+ 
 
   return (
     <>
@@ -33,32 +31,51 @@ const MobileSection = () => {
                   alt=""
                 />
               </div>
-              <div className="greetText md:my-6 lg:my-2 my-1  text-xs  justify-center">
+              <div
+              
+               className="greetText md:my-6 lg:my-2 my-1  text-xs  justify-center">
                 <p className="font-bold text-xs text-center">
 
                   {t("infeelitIntoText")}
                 </p>
               </div>
+              <div
+              onClick={()=>settoggleChat(!toggleChat)}
+               className={`${!toggleChat && 'hidden'} PresentationLinkTExt text-center cursor-pointer`}>
+                <p className="underline text-sm  text-[#1896B0]">{t('presentaionLink')}</p>
+              </div>
+               {/* Chatbot iFrame */}
+            <iframe
+              className={`${!toggleChat && 'hidden'} w-full h-[280px] overflow-y-hidden"`}
+              src={`https://infeelit.vercel.app/?lang=${currentLanguageCode}`}
+              allow="microphone"
+              allowFullScreen
+            ></iframe>
+            
 
-              <div className=" md:hidden youtube-thumbnails  flex mx-auto justify-center gap-8 my-1  ">
+              <div className={`${toggleChat && 'hidden'} md:hidden youtube-thumbnails  flex mx-auto justify-center gap-8 my-1  "`}>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("leftimg")} alt="" /></a>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("rightimg")} alt="" /></a>
               </div>
       
             </div>
 
-              <div className=" mobileTextSection px-2">
-                <div className="earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4">
+              <div className={`${toggleChat && 'hidden'}mobileTextSection px-2`}>
+                <div className={` ${toggleChat && 'hidden'} earlyAccessTopText text-center text-xs  text-[#1896B0] font-bold my-4`}>
                   <p className="">{t("joinNow")}</p>
                 </div>
+                <div className={`${toggleChat && 'hidden'} captureEmail`}>
                 <CaptureEmail/>
+                </div>
 
-                <div className="earlyaccessbottomText text-xs font-bold my-6 md:my-8 text-center  ">
+                <div className={`${toggleChat && 'hidden'} earlyaccessbottomText text-xs font-bold my-6 md:my-8 text-center  "`}>
                   <span className="text-center min-w-80">{t("meanwhileShare")}</span>
                 </div>
               </div>
 
-            <div className="prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-72 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl ">
+            <div
+            onClick={()=>settoggleChat(!toggleChat)}
+             className={`${toggleChat && 'hidden'} prompt-box mx-auto my-4  border-4 h-12 border-[#001C3C] w-72 md:w-72 focus-within:border-[#1896B0] focus-within:w-80 transition-all duration-200 ease-in flex items-center justify-between rounded-3xl `}>
               <div className="search ml-3">
                 <input
                   className="bg-transparent text-sm outline-none w-52"

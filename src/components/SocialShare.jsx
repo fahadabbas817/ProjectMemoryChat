@@ -8,7 +8,7 @@ const SocialShare = () => {
 const {t} = useTranslation()
   return (
     // md:top-20 top-6
-    <div className="social-sharing h-24 lg:h-60 xl:h-80  w-full  bg-white flex flex-col  items-center gap-1">
+    <div className="social-sharing h-20 w-full  bg-white flex flex-col  items-center gap-1">
       <div className="linksContainer gap-2 flex justify-center">
       <a href="http://youtube.com" target="_blank">
         <img className="h-8 md:h-10 hover:translate-y-1 transition-all ease-in duration-150 cursor-pointer" src={assets.facebook} alt="" />

@@ -1,8 +1,7 @@
 
 import React, { useEffect } from 'react'
 import Home from './pages/Home'
-import Login from './pages/Login'
-import SignUp from './pages/SignUp'
+
 
 import { toast,Toaster } from 'sonner'
 
@@ -12,19 +11,19 @@ import {
 	Routes,
 	Route
 } from 'react-router-dom';
+import RegisterForm from './pages/RegisterForm'
 
 
 
 const App = () => {
-  
+
   return (
     <>
     <Toaster richColors closeButton position='top-right' />
     <Router>
       <Routes>
     <Route exact path='/' element={<Home/>}  />
-    <Route exact path='/signup' element={<SignUp/>}  />
-    <Route exact path='/login' element={<Login/>}  />
+    <Route exact path='/register' element={<RegisterForm/>}  />
     </Routes>
   </Router>
   

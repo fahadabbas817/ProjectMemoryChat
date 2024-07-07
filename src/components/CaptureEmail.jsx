@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 import Loader from './Loader'
 import { z } from 'zod'
 import { toast } from 'sonner'
-import { account } from '@/config/appwriteConfig'
-import { ID } from 'appwrite'
+
+import { useNavigate } from 'react-router-dom'
 
 const CaptureEmail = () => {
 
@@ -13,57 +13,25 @@ const CaptureEmail = () => {
     const [loading, setLoading] = useState(false)
     const {t} = useTranslation();
     const emailSchema = z.string().trim().email("Enter Valid Email Please");
-
-    
-  const magicUrlLogin = async (userEmail) => {
-    try {
-      setLoading(true)
-      const token = await account.createMagicURLToken(
-        ID.unique(),
-        userEmail,
-        "https://project-memory-chat.vercel.app"
-      );
-      if(token){
-        toast.success("Sign In link sent",{
-          description:`A SignIn Link has been sent to your provided email address Click on that link to sign Up to infeelit`
-        })
-        
-      }
-    } catch (error) {
-      console.log(error);
-      setErrors(error);
-      toast.error(error.message,{duration:5000})
-    }finally{
-      setLoading(false)
-    }
-  };
-
-
-  const directEmailLogin = async (userEmail) => {
-    try {
-      setLoading(true)
-      const emailCheck = emailSchema.safeParse(userEmail);
-      if(emailCheck.success){
-        await magicUrlLogin(userEmail);
-
-      }else{
-        const formattedErrors = emailCheck.error.format();
-        setErrors(formattedErrors)
-        console.log(errors)
-        setLoading(false)
-      }
-          } catch (error) {
-      console.log(error);
-      setErrors(error);
-      toast.error(error.message)
-    }finally{
-      setLoading(false)
-    }
-  };
+    const navigate = useNavigate();
+  
   const handleDirectUrlLogin = async (e) => {
     e.preventDefault();
-    directEmailLogin(earlyAccessEmail);
-    setEarlyAccessEmail("")
+    setLoading(true)
+    const emailCheck = emailSchema.safeParse(earlyAccessEmail);
+        if(emailCheck.success){
+          toast.success("Redirecting to Registeraton Form",{duration:1000})
+          setTimeout(()=> navigate(`/register`),1000)
+          
+          setEarlyAccessEmail("")
+          setLoading(false)
+        }else{
+          const formattedErrors = emailCheck.error.format();
+          setErrors(formattedErrors)
+          console.log(errors)
+          setLoading(false)
+        }
+   
   };
  
  
@@ -72,9 +40,9 @@ const CaptureEmail = () => {
   return (
     <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
                 
-    <div className="earlyAccesText mt-2 text-black">
-      <p className=" launchDate font-bold text-white">{t("coming")}</p>
-      <p className="summer2024 text-white font-bold">{`"${t("summer2024")}"`}</p>
+    <div className="earlyAccesText  text-black">
+      <p className=" launchDate text-lg font-bold text-white">{t("coming")}</p>
+      <p className={` ${t('lang')==='English'?'text-base':'text-lg'} summer2024 text-white   font-bold`}>{`"${t("summer2024")}"`}</p>
     </div>
     <div className="getEarlyEmailSection w-1/2 text-center flex flex-col items-center text-xs gap-1  ">
       <input
