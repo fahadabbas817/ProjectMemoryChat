@@ -5,12 +5,14 @@ import SocialShare from "./SocialShare";
 import { useTranslation } from "react-i18next";
 
 import CaptureEmail from "./CaptureEmail";
+import ChatBotIframe from "./ChatBotIframe";
 
 const MobileSection = () => {
   const { t } = useTranslation();
  const [prompt, setPrompt] = useState("")
  const [toggleChat, settoggleChat] = useState(false)
  const currentLanguageCode = t('code')
+ const [loading,setLoading]=useState(false)
  
  
 
@@ -44,15 +46,11 @@ const MobileSection = () => {
                className={`${!toggleChat && 'hidden'} PresentationLinkTExt text-center cursor-pointer`}>
                 <p className="underline text-sm  text-[#1896B0]">{t('presentaionLink')}</p>
               </div>
-               {/* Chatbot iFrame */}
-            <iframe
-              className={`${!toggleChat && 'hidden'} w-full h-[280px] overflow-y-hidden"`}
-              src={`https://infeelit.vercel.app/?lang=${currentLanguageCode}`}
-              allow="microphone"
-              allowFullScreen
-            ></iframe>
-            
-
+             
+  {/* Chatbot iFrame */}
+  <div className={`chatbotIframe ${!toggleChat && "hidden"} `}>
+            <ChatBotIframe/>
+            </div>
               <div className={`${toggleChat && 'hidden'} md:hidden youtube-thumbnails  flex mx-auto justify-center gap-8 my-1  "`}>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("leftimg")} alt="" /></a>
                 <a href={t("leftImgLink") } target="_blank"><img className="h-14 rounded-md" src={t("rightimg")} alt="" /></a>

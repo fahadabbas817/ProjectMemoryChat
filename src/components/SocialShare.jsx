@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 
 const SocialShare = () => {
@@ -26,8 +27,8 @@ const {t} = useTranslation()
       </a>
       </div>
       <div className="terms_service text-xs flex  underline gap-4 ">
-      <a href="">{t("terms")}</a>
-      <a href="">{t("privacy")}</a>
+      <Link to="/termsAndService">{t("terms")}</Link>
+      <Link to="/privacyPolicy">{t("privacy")}</Link>
     </div>
     </div>
   );

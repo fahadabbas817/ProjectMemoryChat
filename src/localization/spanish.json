@@ -23,6 +23,386 @@
   "enterEmail": "Ingresa tu email aqui",
   "leftimg": "/thumbnails/spanishLeftImg.png",
   "rightimg": "/thumbnails/spanishRightImg.png",
-  "leftImgLink": " https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
-  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV"
+  "leftImgLink": "https://youtu.be/2AWT1nBEruk",
+  "rightImgLink": "https://youtu.be/F8ntuf5Yd24?si=eZfAzGdtUXr-dZuV",
+  "termsOfService": {
+    "title":"Condiciones de servicio",
+    "lastUpdated": "Última actualización: 8 de julio de 2024",
+    "sections": {
+      "acceptanceOfTerms": {
+        "title": "Aceptación de los términos",
+        "content": "Al acceder o utilizar los servicios proporcionados por la aplicación InFeelit (\"App\") creada por InFeelit, Inc. (\"nosotros\", \"nos\" o \"nuestro\"), usted acepta cumplir y quedar vinculado por estas Condiciones de servicio. Si no está de acuerdo con alguna parte de los términos, no podrá acceder a la App."
+      },
+      "descriptionOfService": {
+        "title": "Descripción del Servicio",
+        "content": "La App es una plataforma que permite a los usuarios capturar, almacenar y compartir sus recuerdos más preciados. Los usuarios pueden publicar información sobre sí mismos, crear y compartir recuerdos con diversos círculos como familiares, amigos, colegas y fans."
+      },
+      "eligibility": {
+        "title": "Elegibilidad",
+        "content": "La App está destinada únicamente a mayores de 13 años. Si es menor de 18 años, deberá contar con el permiso de sus padres o de su tutor legal para utilizar los Servicios. Por favor, pídales que lean este Acuerdo con usted. Si tenemos conocimiento real de que usted es menor de 13 años (o la edad mínima a la que una persona puede utilizar los Servicios en su estado, provincia o país sin el consentimiento paterno, si es superior), dejaremos de prestarle los Servicios y eliminaremos su cuenta y sus datos."
+      },
+      "userRegistration": {
+        "title": "Registro del usuario",
+        "content": "Para utilizar determinadas funciones de la App, deberá registrarse para obtener una cuenta. Usted se compromete a mantener la confidencialidad de su contraseña y será responsable de todo uso que se haga de su cuenta y contraseña. Nos reservamos el derecho a eliminar, reclamar o cambiar un nombre de usuario que usted seleccione si determinamos que es inapropiado."
+      },
+      "userContent": {
+        "title": "Contenido del usuario",
+        "content": "Usted es el propietario del contenido que publique en la App, pero nos concede una licencia libre de derechos para utilizar el contenido sin restricciones."
+      },
+      "thirdPartyLinks": {
+        "title": "Enlaces de terceros y uso compartido",
+        "content": "La App le permite compartir recuerdos y contenidos directamente a plataformas de medios sociales como Instagram, TikTok, YouTube, Twitter, o enviarlos a través de iMessage si ha iniciado sesión en estas otras apps en su dispositivo."
+      },
+      "inAppPurchases": {
+        "title": "Compras dentro de la aplicación",
+        "content": "Actualmente, no hay compras in-app. Cualquier actualización futura relativa a las compras in-app se comunicará a través de la App."
+      },
+      "termination": {
+        "title": "Baja",
+        "content": "Un usuario puede ser dado de baja si viola las condiciones del servicio o publica contenidos que se ajusten a los siguientes temas: Contenido Sexual, Acoso e Intimidación, Amenazas, Violencia y Daño, Información Perjudicial Falsa o Engañosa, Actividades Ilegales o Reguladas, Contenido de Odio, Terrorismo y Extremismo Violento, o por suplantar o acosar a los moderadores o al equipo de InFeelit."
+      },
+      "liabilityLimitation": {
+        "title": "Limitación de responsabilidad",
+        "content": "En la medida máxima permitida por la ley, nosotros y nuestros miembros directivos, accionistas, empleados, afiliados, otorgantes de licencias, agentes y proveedores no seremos responsables de ningún daño indirecto, incidental, especial, consecuente, punitivo o múltiple, ni de ninguna pérdida de beneficios o ingresos, ya sea incurrida directa o indirectamente, ni de ninguna pérdida de datos, uso, fondo de comercio u otras pérdidas intangibles, resultantes de: (a) su acceso a los Servicios, su uso de los mismos o su incapacidad para acceder a ellos o utilizarlos; (b) la conducta o el contenido de otros usuarios o terceros en los Servicios o a través de ellos; o (c) el acceso, uso o alteración no autorizados de su contenido, incluso si se nos ha advertido de la posibilidad de tales daños. En ningún caso nuestra responsabilidad total por todas las reclamaciones relacionadas con los Servicios superará la cantidad mayor de 100 USD o el importe que usted nos haya pagado en los 12 meses anteriores a la fecha de la actividad que dio lugar a la reclamación."
+      },
+      "complianceWithLaws": {
+        "title": "Cumplimiento de las leyes",
+        "content": "Usted cumplirá estas Condiciones y todas las leyes, normas y reglamentos locales, estatales, nacionales e internacionales aplicables."
+      },
+      "arbitration": {
+        "title": "Arbitraje",
+        "content": "Cualquier disputa que surja o esté relacionada con estas Condiciones o con el uso de la App se resolverá mediante arbitraje vinculante obligatorio de acuerdo con las normas del Centro Internacional de Arbitraje de Dubai (DIAC)."
+      },
+      "changesToTerms": {
+        "title": "Modificaciones de las Condiciones",
+        "content": "Nos reservamos el derecho a modificar estas Condiciones en cualquier momento. Los cambios y aclaraciones entrarán en vigor inmediatamente después de su publicación en la App. Si realizamos cambios materiales en esta política, le notificaremos a través de la App que ha sido actualizada."
+      },
+      "governingLaw": {
+        "title": "Legislación aplicable",
+        "content": "Las leyes de los Emiratos Árabes Unidos (EAU), excluyendo sus conflictos de normas legales, regirán estos Términos y Su uso del Servicio. Su uso de la Aplicación también puede estar sujeto a otras leyes locales, estatales, nacionales o internacionales."
+      },
+      "disputesResolution": {
+        "title": "Resolución de disputas",
+        "content": "Si tiene alguna duda o disputa sobre el Servicio, acepta primero intentar resolver la disputa de manera informal poniéndose en contacto con nosotros."
+      },
+      "forEUUsers": {
+        "title": "Para usuarios de la Unión Europea (UE)",
+        "content": "Si usted es un consumidor de la Unión Europea, se beneficiará de las disposiciones obligatorias de la legislación del país en el que resida."
+      },
+      "usLegalCompliance": {
+        "title": "Cumplimiento de la legislación de Estados Unidos",
+        "content": "Usted declara y garantiza que (i) no se encuentra en un país sujeto al embargo del gobierno de los Estados Unidos, o que haya sido designado por el gobierno de los Estados Unidos como país \"de apoyo al terrorismo\", y (ii) no figura en ninguna lista de partes prohibidas o restringidas del gobierno de los Estados Unidos."
+      },
+      "severabilityAndWaiver": {
+        "title": "Divisibilidad y renuncia"
+      },
+      "severability": {
+        "title": "Divisibilité",
+        "content": "Si l'une des dispositions des présentes conditions est jugée inapplicable ou invalide, cette disposition sera modifiée et interprétée de manière à atteindre les objectifs de ladite disposition dans toute la mesure du possible en vertu de la législation applicable, et les autres dispositions resteront pleinement en vigueur."
+      },
+      "waiver": {
+        "title": "Renonciation",
+        "content": "Sauf dans les cas prévus par les présentes, le fait de ne pas exercer un droit ou de ne pas exiger l'exécution d'une obligation en vertu des présentes conditions n'affecte pas la capacité d'une partie à exercer ce droit ou à exiger cette exécution à tout moment par la suite, et la renonciation à une violation ne constitue pas une renonciation à toute violation ultérieure."
+      },
+      "translationInterpretation": {
+        "title": "Traducción Interpretación",
+        "content": "Estas Condiciones Generales pueden haber sido traducidas si las hemos puesto a su disposición en nuestro Servicio. Usted acepta que el texto original en inglés prevalecerá en caso de litigio."
+      },
+      "contactInformation": {
+        "title": "Información de contacto",
+        "content": "Para cualquier pregunta o comentario sobre estas Condiciones, póngase en contacto con nosotros en legal@infeelit.com."
+      }
+    }
+  },
+
+  "privacyPolicy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización: 8 de julio de 2024",
+    "introduction": {
+      "paraText": "Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza el Servicio y le informa sobre sus derechos de privacidad y cómo le protege la ley. Utilizamos sus datos personales para proporcionar y mejorar el Servicio. Al utilizar el Servicio, usted acepta la recopilación y el uso de la información de acuerdo con esta Política de Privacidad."
+    },
+    "interpretationDefinitions": {
+      "title": "Interpretación y definiciones",
+      "interpretation": {
+        "title": "Interpretación",
+        "paraText": "Las palabras con mayúscula inicial tienen los significados que se definen a continuación. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural."
+      },
+      "definitions": {
+        "title": "Definiciones",
+        "list": {
+          "text1": {
+            "title": "Servicio",
+            "content": " hace referencia a la página de aterrizaje previa al lanzamiento y al chatbot operados por InFeelit, Inc."
+          },
+          "text2": {
+            "title": "Cuenta",
+            "content": " se refiere a una cuenta única creada para que usted pueda acceder a nuestro Servicio o a partes de nuestro Servicio."
+          },
+          "text3": {
+            "title": "Empresa",
+            "content": " (denominada \"la Empresa\", \"Nosotros\", \"Nos\" o \"Nuestro\" en el presente Acuerdo) se refiere a InFeelit, Inc."
+          },
+          "text4": {
+            "title": "Cookies",
+            "content": " son pequeños archivos que un sitio web coloca en su ordenador, dispositivo móvil o cualquier otro dispositivo y que contienen, entre otras cosas, los datos de su historial de navegación en dicho sitio web."
+          },
+          "text5": {
+            "title": "País",
+            "content": " se refiere al país concreto en el que reside el usuario."
+          },
+          "text6": {
+            "title": "Responsable del tratamiento",
+            "content": " a efectos del GDPR, se refiere a la Empresa como la persona jurídica que sola o conjuntamente con otras determina los fines y medios del tratamiento de los datos personales."
+          },
+          "text7": {
+            "title": "Dispositivo",
+            "content": " se refiere a cualquier aparato que pueda acceder al Servicio, como un ordenador, un teléfono móvil o una tableta digital."
+          },
+          "text8": {
+            "title": "Datos personales",
+            "content": " es cualquier información relacionada con un individuo identificado o identificable. A efectos del GDPR, Datos Personales significa cualquier información relacionada con usted como un nombre, un número de identificación, datos de localización, identificador en línea, o con uno o más factores específicos de la identidad física, fisiológica, genética, mental, económica, cultural o social."
+          },
+          "text9": {
+            "title": "Proveedor de servicios",
+            "content": " se refiere a cualquier persona física o jurídica que procese los datos en nombre de la Empresa. Se refiere a terceras empresas o personas empleadas por la Empresa para facilitar el Servicio, prestar el Servicio en nombre de la Empresa, realizar servicios relacionados con el Servicio o ayudar a la Empresa a analizar cómo se utiliza el Servicio."
+          },
+          "text10": {
+            "title": "Datos de uso",
+            "content": " se refiere a los datos recopilados automáticamente, ya sean generados por el uso del Servicio o procedentes de la propia infraestructura del Servicio (por ejemplo, la duración de la visita a una página)."
+          },
+          "text11": {
+            "title": "Usted",
+            "content": " se refiere al individuo que accede o utiliza el Servicio, o a la empresa, u otra entidad legal en nombre de la cual dicho individuo accede o utiliza el Servicio, según corresponda. De acuerdo con el GDPR, Usted puede ser referido como el Sujeto de Datos o como el Usuario, ya que es el individuo que utiliza el Servicio."
+          }
+        }
+      }
+    },
+    "collectingAndUsingYourPersonalData": {
+      "title": "Recopilación y uso de sus datos personales",
+      "ageConsent": {
+        "title": "Consentimiento de edad",
+        "paraText1": "InFeelit está destinado únicamente a usuarios mayores de 13 años. Si tiene motivos para creer que alguien menor de 13 años está utilizando InFeelit, póngase en contacto con nosotros en",
+        "paraText2": "Si usted es menor de 18 años, debe contar con el permiso de sus padres o de su tutor legal para utilizar los Servicios. Por favor, pídales que lean este acuerdo con usted."
+      }
+    },
+    "typesOfPersonalData": {
+      "title": "Tipos de datos recogidos",
+      "personalData": {
+        "title": "Datos personales",
+        "text1": "Al utilizar nuestro Servicio, es posible que le pidamos que nos proporcione cierta información de identificación personal que pueda utilizarse para ponernos en contacto con usted o identificarle. La información personal identificable puede incluir, pero no se limita a:",
+        "list": {
+          "text1": "Dirección de correo electrónico",
+          "text2": "Nombre"
+        }
+      },
+      "usageData": {
+        "title": "Datos de uso",
+        "paraText1": "Los Datos de Uso se recogen automáticamente al utilizar el Servicio. Los Datos de uso pueden incluir información como la dirección de protocolo de Internet de su Dispositivo (por ejemplo, la dirección IP), el tipo de navegador, la versión del navegador, las páginas de nuestro Servicio que visita, la hora y la fecha de su visita, el tiempo empleado en esas páginas, identificadores únicos de dispositivos y otros datos de diagnóstico.",
+        "paraText2": "Cuando accede al Servicio por o a través de un dispositivo móvil, podemos recopilar cierta información automáticamente, incluyendo, entre otros, el tipo de dispositivo móvil que utiliza, el identificador único de su dispositivo móvil, la dirección IP de su dispositivo móvil, su sistema operativo móvil, el tipo de navegador de Internet móvil que utiliza, los identificadores únicos de dispositivo y otros datos de diagnóstico. También podemos recopilar información que su navegador envía cada vez que visita nuestro Servicio o cuando accede al Servicio por o a través de un dispositivo móvil."
+      }
+    },
+    "consentForAccessingData": {
+      "title": "Consentimiento para acceder a los datos",
+      "paraText1": "Con su consentimiento explícito, podemos solicitar el acceso a los contactos de su dispositivo. Este acceso tiene varias finalidades:",
+      "list": {
+        "text1": "Invitaciones: Facilitar el proceso de invitar a sus amigos a unirse a la plataforma InFeelit.",
+        "text2": "Descubrimiento de conexiones existentes: Permitirle descubrir amigos o conocidos que ya forman parte de la comunidad InFeelit."
+      },
+      "paraText2": "Su decisión de facilitar el acceso a sus contactos es totalmente voluntaria. Estas son algunas cosas que debe saber si decide concedernos este acceso:",
+      "list2": {
+        "text1": "Mejora del servicio: Utilizamos estos datos principalmente para enriquecer su experiencia de usuario y ayudarle a encontrar conexiones significativas en la plataforma.",
+        "text2": "Privacidad de los datos: La información de sus contactos no se comparte con ninguna parte externa ni se utiliza para ninguna otra actividad no divulgada.",
+        "text3": "Revocación del consentimiento: Puede revocar este consentimiento en cualquier momento a través de los ajustes de su dispositivo o de la aplicación, aunque esto puede limitar algunas funciones de la aplicación."
+      }
+    },
+    "informationFromThirdPartySocialMediaServices": {
+      "title": "Información procedente de servicios de medios sociales de terceros",
+      "paraText1": "La Empresa puede permitirle crear una cuenta e iniciar sesión para utilizar el Servicio a través de los siguientes Servicios de Medios Sociales de Terceros:",
+      "list": {
+        "text1": "Google",
+        "text2": "Facebook",
+        "text3": "Twitter"
+      },
+      "paraText2": "Si decide registrarse a través de un Servicio de Medios Sociales de Terceros o concedernos acceso de cualquier otro modo, es posible que recopilemos datos personales que ya estén asociados a la cuenta de su Servicio de Medios Sociales de Terceros, como su nombre, su dirección de correo electrónico, sus actividades o su lista de contactos asociados a dicha cuenta. También puede tener la opción de compartir información adicional con la Empresa a través de la cuenta de su Servicio de Medios Sociales de Terceros. Si decide proporcionar dicha información y datos personales, durante el registro o de otro modo, está dando permiso a la Empresa para utilizarlos, compartirlos y almacenarlos de forma coherente con esta Política de privacidad."
+    },
+    "trackingTechnologiesAndCookies": {
+      "title": "Tecnologías de seguimiento y cookies",
+      "text1": "Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro Servicio y almacenar cierta información. Las tecnologías de rastreo utilizadas son balizas, etiquetas y scripts para recopilar y rastrear información y para mejorar y analizar nuestro Servicio. Las tecnologías que utilizamos pueden incluir:",
+      "technologies": {
+        "cookies": {
+          "title": "Cookies o cookies del navegador",
+          "text": "Una cookie es un pequeño archivo que se coloca en su Dispositivo. Usted puede indicar a su navegador que rechace todas las Cookies o que le indique cuándo se está enviando una Cookie. Sin embargo, si no acepta las Cookies, es posible que no pueda utilizar algunas partes de nuestro Servicio. A menos que haya ajustado la configuración de su navegador para que rechace las Cookies, nuestro Servicio puede utilizar Cookies."
+        },
+        "flashCookies": {
+          "title": "Cookies Flash",
+          "text": "Algunas funciones de nuestro Servicio pueden utilizar objetos locales almacenados (o Flash Cookies) para recoger y almacenar información sobre sus preferencias o su actividad en nuestro Servicio. Las Flash Cookies no se gestionan mediante los mismos ajustes del navegador que los utilizados para las Cookies del navegador. Para obtener más información sobre cómo puede eliminar las Flash Cookies, lea",
+          "link": "https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+        },
+        "webBeacons": {
+          "title": "Balizas web",
+          "text": "Ciertas secciones de nuestro Servicio y nuestros correos electrónicos pueden contener pequeños archivos electrónicos conocidos como balizas web (también denominadas gifs transparentes, etiquetas de píxel y gifs de píxel único) que permiten a la Empresa, por ejemplo, contar los usuarios que han visitado esas páginas o abierto un correo electrónico y para otras estadísticas relacionadas con el sitio web (por ejemplo, registrar la popularidad de una determinada sección y verificar la integridad del sistema y del servidor)."
+        }
+      },
+      "cookiesTypes": {
+        "text1": "Las Cookies pueden ser \"Persistentes\" o de \"Sesión\". Las Cookies Persistentes permanecen en su ordenador personal o dispositivo móvil cuando se desconecta, mientras que las Cookies de Sesión se eliminan en cuanto cierra su navegador web. Utilizamos tanto las Cookies de Sesión como las Persistentes para los fines que se indican a continuación:",
+        "necessary": {
+          "title": "Cookies Necesarias / Esenciales",
+          "text": "Estas Cookies son esenciales para proporcionarle los servicios disponibles a través del Sitio Web y para permitirle utilizar algunas de sus funciones. Ayudan a autenticar a los usuarios y a evitar el uso fraudulento de las cuentas de usuario. Sin estas Cookies, los servicios que usted ha solicitado no pueden ser proporcionados, y sólo utilizamos estas Cookies para proporcionarle dichos servicios."
+        },
+        "noticeAcceptance": {
+          "title": "Política de Cookies / Aviso Cookies de aceptación",
+          "text": "Estas Cookies identifican si los usuarios han aceptado el uso de cookies en el Sitio Web."
+        },
+        "functionality": {
+          "title": "Cookies de Funcionalidad",
+          "text": "Estas Cookies nos permiten recordar las elecciones que usted realiza cuando utiliza el Sitio Web, como recordar sus datos de acceso o su preferencia de idioma. El propósito de estas Cookies es proporcionarle una experiencia más personal y evitar que tenga que volver a introducir sus preferencias cada vez que utilice el Sitio Web."
+        },
+        "trackingPerformance": {
+          "title": "Cookies de seguimiento y rendimiento",
+          "text": "Estas Cookies se utilizan para rastrear información sobre el tráfico al Sitio Web y cómo lo utilizan los usuarios. La información recogida a través de estas Cookies puede identificarle directa o indirectamente como visitante individual. Esto se debe a que la información recopilada suele estar vinculada a un identificador seudónimo asociado al dispositivo que usted utiliza para acceder al Sitio Web. También podemos utilizar estas Cookies para probar nuevas páginas, características o nuevas funcionalidades del Sitio Web para ver cómo reaccionan a ellas nuestros usuarios."
+        }
+      },
+      "text2": "Para obtener más información sobre las cookies que utilizamos y sus opciones con respecto a las cookies, visite nuestra Política de cookies o la sección Cookies de nuestra Política de privacidad."
+    },
+    "useOfYourPersonalData": {
+      "title": "Uso de sus datos personales",
+      "list": {
+        "service": "Para proporcionar y mantener nuestro Servicio, incluyendo la supervisión del uso de nuestro Servicio.",
+        "accountManagement": "Para gestionar su cuenta: para gestionar su registro como usuario del Servicio. Los datos personales que nos facilite pueden darle acceso a diferentes funcionalidades del Servicio que están a su disposición como usuario registrado.",
+        "contact": "Para ponernos en contacto con Usted: para ponernos en contacto con Usted por correo electrónico en relación con actualizaciones o comunicaciones informativas relacionadas con las funcionalidades, productos o servicios contratados, incluidas las actualizaciones de seguridad, cuando sea necesario o razonable para su implementación.",
+        "requests": "Para gestionar sus solicitudes: para atender y gestionar las solicitudes que nos realice.",
+        "other": "Para otros fines: podemos utilizar su información para otros fines, como el análisis de datos, la identificación de tendencias de uso, la determinación de la eficacia de nuestras campañas promocionales y para evaluar y mejorar nuestro Servicio, productos, servicios, marketing y su experiencia."
+      }
+    },
+    "sharingYourPersonalData": {
+      "title": "Compartir sus datos personales",
+      "text1": "Dada la naturaleza de nuestra página de pre-lanzamiento, nuestro objetivo es minimizar el intercambio de sus datos personales. Sin embargo, podemos compartir sus datos personales en las siguientes situaciones:",
+      "list": {
+        "serviceProviders": "Con proveedores de servicios: podemos compartir sus datos personales con proveedores de servicios para supervisar y analizar el uso de nuestro Servicio y para ponernos en contacto con usted.",
+        "consent": "Con su consentimiento: podemos divulgar sus datos personales para cualquier otro fin con su consentimiento."
+      }
+    },
+    "retentionOfYourPersonalData": {
+      "title": "Conservación de sus datos personales",
+      "text1": "La Empresa conservará sus datos personales sólo durante el tiempo que sea necesario para los fines establecidos en la presente Política de Privacidad. Conservaremos y utilizaremos sus datos personales en la medida necesaria para cumplir con nuestras obligaciones legales (por ejemplo, si estamos obligados a conservar sus datos para cumplir con las leyes aplicables), resolver disputas y hacer cumplir nuestros acuerdos legales y políticas."
+    },
+    "transferOfYourPersonalData": {
+      "title": "Transferencia de sus datos personales",
+      "text1": "Su información, incluidos los datos personales, se procesa en las oficinas operativas de la empresa y en cualquier otro lugar donde se encuentren las partes implicadas en el procesamiento. Esto significa que esta información puede ser transferida a -y mantenida en- ordenadores ubicados fuera de su estado, provincia, país u otra jurisdicción gubernamental donde las leyes de protección de datos puedan diferir de las de su jurisdicción. Su consentimiento a esta Política de Privacidad seguido de su envío de dicha información representa su acuerdo a dicha transferencia.",
+      "text2": "La Empresa tomará todas las medidas razonablemente necesarias para garantizar que sus datos sean tratados de forma segura y de acuerdo con esta Política de Privacidad y no se realizará ninguna transferencia de sus datos personales a una organización o un país a menos que existan controles adecuados que incluyan la seguridad de sus datos y otra información personal."
+    },
+    "disclosureOfYourPersonalData": {
+      "title": "Divulgación de sus datos personales",
+      "businessTransaction": {
+        "title": "Transacciones comerciales",
+        "text": "Si la empresa participa en una fusión, adquisición o venta de activos, sus datos personales podrán ser transferidos. Le avisaremos antes de que sus datos personales sean transferidos y pasen a estar sujetos a una Política de Privacidad diferente."
+      },
+      "lawEnforcement": {
+        "title": "Cumplimiento de la ley",
+        "text": "En determinadas circunstancias, la Empresa puede verse obligada a revelar sus datos personales si así lo exige la ley o en respuesta a solicitudes válidas de las autoridades públicas (por ejemplo, un tribunal o una agencia gubernamental)."
+      },
+      "otherLegalRequirements": {
+        "title": "Otros requisitos legales",
+        "list": {
+          "legalObligation": "Cumplir con una obligación legal",
+          "defendRights": "Proteger y defender los derechos o la propiedad de la Empresa",
+          "preventWrongdoing": "Prevenir o investigar posibles irregularidades en relación con el Servicio",
+          "personalSafety": "Proteger la seguridad personal de los usuarios del Servicio o del público",
+          "legalLiability": "Proteger contra la responsabilidad legal"
+        }
+      }
+    },
+    "securityOfYourPersonalData": {
+      "title": "Seguridad de sus datos personales",
+      "text": "La seguridad de sus datos personales es importante para nosotros, pero recuerde que ningún método de transmisión a través de Internet, o método de almacenamiento electrónico es 100% seguro. Aunque nos esforzamos por utilizar medios comercialmente aceptables para proteger sus datos personales, no podemos garantizar su seguridad absoluta."
+    },
+    "GPDRPrivacy": {
+      "title": "Privacidad GDPR",
+      "legalBasisForProcessingPersonalData": {
+        "title": "Base jurídica para el tratamiento de datos personales en virtud del GDPR",
+        "list": {
+          "text1": {
+            "title": "Consentimiento:",
+            "content": " usted ha dado su consentimiento para el tratamiento de datos personales para uno o más fines específicos."
+          },
+          "text2": {
+            "title": "Ejecución de un contrato:",
+            "content": " el tratamiento de datos personales es necesario para la ejecución de un contrato con usted y/o para cualquier obligación precontractual del mismo."
+          },
+          "text3": {
+            "title": "Obligaciones legales:",
+            "content": " el tratamiento de datos personales es necesario para el cumplimiento de una obligación legal a la que está sujeta la Empresa."
+          },
+          "text4": {
+            "title": "Intereses vitales:",
+            "content": " el tratamiento de datos personales es necesario para proteger sus intereses vitales o los de otra persona física."
+          },
+          "text5": {
+            "title": "Intereses públicos:",
+            "content": " el tratamiento de datos personales está relacionado con una tarea que se lleva a cabo en interés público o en el ejercicio de la autoridad oficial conferida a la Empresa."
+          },
+          "text6": {
+            "title": "Intereses legítimos:",
+            "content": " el tratamiento de datos personales es necesario a efectos de los intereses legítimos perseguidos por la Empresa."
+          },
+          "paragraphText": "En cualquier caso, la Empresa estará encantada de ayudarle a aclarar la base jurídica específica que se aplica al tratamiento y, en particular, si el suministro de datos personales es un requisito legal o contractual, o un requisito necesario para celebrar un contrato."
+        }
+      }
+    },
+    "rightsUnderGPDR": {
+      "title": "Sus derechos en virtud del GDPR",
+      "paraText": "La Empresa se compromete a respetar la confidencialidad de sus datos personales y a garantizarle el ejercicio de sus derechos. Usted tiene derecho en virtud de la presente Política de Privacidad, y por ley si se encuentra dentro de la UE, a:",
+      "list": {
+        "text1": {
+          "title": "Solicitar el acceso a sus datos personales:",
+          "content": " Derecho a acceder, actualizar o eliminar la información que tenemos sobre usted. Siempre que sea posible, puede acceder, actualizar o solicitar la eliminación de sus datos personales directamente en la sección de configuración de su cuenta. Si no puede realizar estas acciones por sí mismo, póngase en contacto con nosotros para que le ayudemos. Esto también le permite recibir una copia de los datos personales que tenemos sobre usted."
+        },
+        "text2": {
+          "title": "Solicitar la corrección de los datos personales que tenemos sobre usted:",
+          "content": " Tiene derecho a que se corrija cualquier dato incompleto o inexacto que tengamos sobre usted."
+        },
+        "text3": {
+          "title": "Oponerse al tratamiento de sus datos personales:",
+          "content": " Este derecho existe cuando nos basamos en un interés legítimo como fundamento jurídico de nuestro tratamiento y hay algo en su situación particular que le hace querer oponerse a que tratemos sus datos personales por este motivo. También tiene derecho a oponerse cuando estemos tratando sus datos personales con fines de marketing directo."
+        },
+        "text4": {
+          "title": "Solicitar la supresión de sus datos personales:",
+          "content": " Tiene derecho a pedirnos que borremos o eliminemos sus datos personales cuando no exista una buena razón para que sigamos procesándolos."
+        },
+        "text5": {
+          "title": "Solicitar la transferencia de sus datos personales:",
+          "content": " Le proporcionaremos a usted, o a un tercero que usted haya elegido, sus datos personales en un formato estructurado, de uso común y lectura mecánica. Tenga en cuenta que este derecho sólo se aplica a la información automatizada que usted nos haya proporcionado inicialmente para que la utilicemos o cuando hayamos utilizado la información para ejecutar un contrato con usted."
+        },
+        "text6": {
+          "title": "Retirar su consentimiento:",
+          "content": " Tiene derecho a retirar su consentimiento sobre el uso de sus datos personales. Si retira su consentimiento, es posible que no podamos proporcionarle acceso a determinadas funcionalidades específicas del Servicio."
+        }
+      }
+    },
+    "GPDProtectionRights": {
+      "title": "Ejercicio de sus derechos de protección de datos GDPR",
+      "paraText1": "Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición poniéndose en contacto con nosotros. Tenga en cuenta que podemos pedirle que verifique su identidad antes de responder a dichas solicitudes. Si realiza una solicitud, haremos todo lo posible por responderle lo antes posible.",
+      "paraText2": "Tiene derecho a presentar una reclamación ante una autoridad de protección de datos sobre nuestra recopilación y uso de sus datos personales. Para más información, si se encuentra en el Espacio Económico Europeo (EEE), póngase en contacto con su autoridad local de protección de datos en el EEE."
+    },
+    "childrenPrivacy": {
+      "title": "Privacidad de los niños",
+      "paraText": "Nuestro Servicio no se dirige a menores de 13 años. No recopilamos conscientemente datos personales de menores de 13 años. Si usted es padre o tutor y tiene conocimiento de que su hijo nos ha proporcionado datos personales, póngase en contacto con nosotros. Si tenemos conocimiento de que hemos recopilado datos personales de cualquier persona menor de 13 años sin la verificación del consentimiento paterno, tomaremos medidas para eliminar esa información de nuestros servidores."
+    },
+    "linkToOtherWeb": {
+      "title": "Enlaces a otras páginas web",
+      "paraText": "Nuestro Servicio puede contener enlaces a otras páginas web que no son operadas por nosotros. Si hace clic en un enlace de terceros, será dirigido al sitio de ese tercero. Le recomendamos encarecidamente que revise la Política de Privacidad de cada sitio que visite. No tenemos ningún control ni asumimos ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de los sitios o servicios de terceros."
+    },
+    "changesToPrivacyPolicy": {
+      "title": "Cambios en esta Política de Privacidad",
+      "paraText": "Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página. Se lo haremos saber por correo electrónico y/o mediante un aviso destacado en nuestro Servicio, antes de que el cambio entre en vigor y actualizaremos la fecha de \"Última actualización\" en la parte superior de esta Política de Privacidad. Le aconsejamos que revise periódicamente esta Política de Privacidad para comprobar si se han producido cambios. Los cambios en esta Política de Privacidad entrarán en vigor cuando se publiquen en esta página."
+    },
+    "ContactUsSection": {
+      "title": "Póngase en contacto con nosotros",
+      "paraText": "Si tiene alguna pregunta sobre esta Política de Privacidad, puede ponerse en contacto con nosotros:",
+      "list": {
+        "text1": "Por correo electrónico: legal@infeelit.com"
+      }
+    }
+  }
+
 }

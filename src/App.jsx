@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import Home from './pages/Home'
 
 
@@ -12,6 +12,8 @@ import {
 	Route
 } from 'react-router-dom';
 import RegisterForm from './pages/RegisterForm'
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndService from './pages/TermsAndService';
 
 
 
@@ -24,6 +26,8 @@ const App = () => {
       <Routes>
     <Route exact path='/' element={<Home/>}  />
     <Route exact path='/register/' element={<RegisterForm/>}  />
+    <Route exact path='/termsAndService/' element={<TermsAndService/>}  />
+    <Route exact path='/privacyPolicy/' element={<PrivacyPolicy/>}  />
     </Routes>
   </Router>
   

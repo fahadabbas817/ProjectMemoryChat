@@ -8,7 +8,7 @@ import { ChatContext } from "@/components/ChatContext";
 
 const RegisterForm = () => {
  const {earlyAccessEmail} = useContext(ChatContext)
- console.log(earlyAccessEmail)
+
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [signupData, setSignupData] = useState({
@@ -23,44 +23,10 @@ const RegisterForm = () => {
   
  
   const countryList =  [
-    // English-speaking countries
-    "United Kingdom", "United States", "Canada", "Australia", "New Zealand", "Ireland", "South Africa", 
-    "Nigeria", "India", "Philippines", "Singapore", "Kenya", "Jamaica", "Trinidad and Tobago", "Barbados", 
-    "Ghana", "Zimbabwe", "Uganda", "Malta", "Fiji", "Papua New Guinea", "Belize", "Saint Kitts and Nevis", 
-    "Antigua and Barbuda", "Saint Vincent and the Grenadines", "Saint Lucia", "Grenada", "Guyana", "Liberia",
-    
-    // French-speaking countries
-    "France", "Belgique", "Suisse", "Luxembourg", "Monaco", "Congo", "Côte d'Ivoire", "Sénégal", 
-    "Madagascar", "Cameroun", "Burkina Faso", "Niger", "Mali", "Rwanda", "Tchad", "Guinée", "Bénin", 
-    "Burundi", "Togo", "République Centrafricaine", "Gabon", "République du Congo", "Djibouti", 
-    "Guinée équatoriale", "Comores", "Vanuatu", "Seychelles",
-
-    // Spanish-speaking countries
-    "España", "México", "Colombia", "Argentina", "Perú", "Venezuela", "Chile", "Ecuador", "Guatemala", 
-    "Cuba", "Bolivia", "Dominican Republic", "Honduras", "Paraguay", "El Salvador", "Nicaragua", 
-    "Costa Rica", "Puerto Rico", "Uruguay", "Panama", "Equatorial Guinea",
-
-    // Italian-speaking countries
-    "Italia", "Svizzera", "San Marino", "Città del Vaticano", "Slovenia", "Croazia", "Brasile",
-
-    // Chinese-speaking countries
-    "中国", "新加坡", "马来西亚", "台湾", "香港", "澳门",
-
-    // Hindi-speaking countries
-    "भारत", "फिजी", "नेपाल", "सूरीनाम", "त्रिनिदाद और टोबैगो", "मॉरीशस", "गुयाना",
-
-    // Arabic-speaking countries
-    "السعودية", "مصر", "الجزائر", "العراق", "المغرب", "السودان", "تونس", "سوريا", "اليمن", "الأردن", 
-    "ليبيا", "لبنان", "الصومال", "الإمارات العربية المتحدة", "فلسطين", "عمان", "الكويت", "موريتانيا", 
-    "قطر", "البحرين", "جيبوتي", "جزر القمر",
-
-    // Portuguese-speaking countries
-    "Portugal", "Brasil", "Moçambique", "Angola", "Guiné-Bissau", "Timor-Leste", "Guiné Equatorial", 
-    "Cabo Verde", "São Tomé e Príncipe",
-
-    // Russian-speaking countries
-    "Россия", "Беларусь", "Казахстан", "Киргизия", "Таджикистан", "Узбекистан", "Армения", "Азербайджан", 
-    "Грузия", "Молдова", "Украина", "Латвия", "Литва", "Эстония"
+    "Algeria", "Angola", "Antigua and Barbuda", "Argentina",
+  "Armenia",  "Australia",  "Azerbaijan",  "Bahrain",  "Barbados",  "Belarus",  "Belgium",  "Belize",  "Benin",  "Bolivia",  "Brazil",  "Burkina Faso",  "Burundi",  "Cameroon",  "Canada",  "Cape Verde",  "Central African Republic",  "Chad",  "Chile",  "China",  "Colombia",  "Comoros",  "Congo",  "Costa Rica",  "Croatia",  "Cuba",  "Djibouti",  "Dominican Republic",  "East Timor",  "Ecuador",  "Egypt",  "El Salvador",  "Equatorial Guinea",  "Estonia",  "Fiji",  "France",  "Gabon",  "Georgia",  "Ghana",  "Grenada",  "Guatemala",  "Guinea",  "Guinea-Bissau",  "Guyana",  "Honduras",  "Hong Kong",  "India",  "Iraq",  "Ireland",  "Italy",  "Ivory Coast",
+  "Jamaica",  "Jordan",  "Kazakhstan",  "Kenya",  "Kuwait",  "Kyrgyzstan",  "Latvia",  "Lebanon",  "Liberia",  "Libya",  "Lithuania",  "Luxembourg",  "Macau",  "Madagascar",  "Malaysia",  "Mali",  "Malta",  "Mauritania",  "Mauritius",  "Mexico",  "Moldova",  "Monaco",
+  "Morocco",  "Mozambique",  "Nepal",  "New Zealand",  "Nicaragua",  "Niger",  "Nigeria",  "Oman",  "Pakistan",  "Palestine",  "Panama",  "Papua New Guinea",  "Paraguay",  "Peru",  "Philippines",  "Portugal",  "Puerto Rico",  "Qatar",  "Republic of the Congo",  "Russia",  "Rwanda",  "Saint Kitts and Nevis",  "Saint Lucia",  "Saint Vincent and the Grenadines",  "San Marino",  "Sao Tome and Principe",  "Saudi Arabia",  "Senegal",  "Seychelles",  "Singapore",  "Slovenia",  "Somalia",  "South Africa",  "Spain",  "Sudan",  "Suriname",  "Switzerland",  "Syria",  "Taiwan",  "Tajikistan",  "Togo",  "Trinidad and Tobago",  "Tunisia",  "Uganda",  "Ukraine",  "United Arab Emirates",  "United Kingdom",  "United States",  "Uruguay",  "Uzbekistan",  "Vanuatu",  "Vatican City",  "Venezuela",  "Yemen",  "Zimbabwe"
 ];
  
 
@@ -83,43 +49,17 @@ const RegisterForm = () => {
   };
   
   const createBrevoContact = async (userinfo) => {
-    const options = {
-      method: 'POST',
-      url: 'https://api.brevo.com/v3/contacts/doubleOptinConfirmation',
-      headers: {
-        accept: 'application/json',
-        'content-type': 'application/json',
-        'api-key': import.meta.env.VITE_BREVO_API_KEY,
-      },
-      data: {
-        attributes: {
-          COUNTRY: userinfo.country,
-          AGE: userinfo.age,
-          NAME: userinfo.name,
-          CHILDREN: userinfo.children,
-        },
-        updateEnabled: false,
-        email: userinfo.email,
-        templateId: 1,
-        redirectionUrl: 'https://project-memory-chat.vercel.app',
-        includeListIds: [2],
-      },
-    };
-  
     try {
-      const response = await axios(options);
-      console.log(response.data);
+      const response = await axios.post(import.meta.env.VITE_CREATE_CONTACT_API_URL, userinfo); 
+      toast.success('Contact created successfully!');
       return response.data;
     } catch (error) {
       if (error.response) {
-        const errorResponse = error.response.data;
-        console.log(errorResponse);
-          toast.error(errorResponse.message || 'Failed to create contact');
-          throw new Error(errorResponse.message || 'Failed to create contact');
+        toast.error(error.response.data.message || 'Failed to create contact');
       } else {
         toast.error(error.message);
-        throw error;
       }
+      throw error;
     }
   };
 
@@ -140,16 +80,15 @@ const RegisterForm = () => {
     e.preventDefault();
     setLoading(true);
     const result = signUpSchema.safeParse(signupData);
-
     if (!result.success) {
       const formattedErrors = result.error.format();
       setErrors(formattedErrors);
       setLoading(false);
     } else {
       setErrors({});
+
       try {
         await createBrevoContact(signupData);
-        console.log("Form submitted successfully", result.data);
         toast.success(
           "Verify Your Email",
           {
@@ -159,7 +98,6 @@ const RegisterForm = () => {
         setLoading(false);
         setTimeout(() => navigate("/"), 4000);
       } catch (error) {
-        console.log(error);
         toast.error(
           error.message ||
             "An Error Occured While Registration Please Try again"
@@ -169,22 +107,23 @@ const RegisterForm = () => {
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#E3F2F2] transition duration-100 ease-in">
-      <div className=" bg-transparent sm:bg-white p-8 sm:p-16 rounded sm:shadow-2xl sm:w-2/3 w-full">
-        <h2 className="text-xl sm:text-3xl text-center font-bold mb-10 text-gray-800">
+    <div className="min-h-screen flex items-center justify-center bg-[#FFA500] transition duration-100 ease-in">
+      {/* sm:shadow-2xl */}
+      <div className=" p-8 sm:p-16 rounded  sm:w-2/3 w-full">
+        <h2 className="text-2xl sm:text-3xl text-center font-bold mb-10 text-black">
           REGISTER
         </h2>
 
         <form onSubmit={handleSignUp} className="space-y-5">
           <div className="Name">
-            <label className="block mb-1 font-bold text-gray-500">Name</label>
+            <label className="block mb-1 font-bold text-black">Name</label>
             <input
               onChange={(e) => {
                 setSignupData({ ...signupData, name: e.target.value });
                 setErrors({});
               }}
               type="text"
-              className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-blue-500"
+              className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-black"
             />
           </div>
           {errors.name && (
@@ -192,7 +131,7 @@ const RegisterForm = () => {
           )}
 
           <div className="email">
-            <label className="block mb-1 font-bold text-gray-500">Email</label>
+            <label className="block mb-1 font-bold text-black">Email</label>
             <input
               onChange={(e) => {
                 setSignupData({ ...signupData, email: e.target.value });
@@ -202,20 +141,20 @@ const RegisterForm = () => {
               value={signupData.email}
               type="email"
               
-              className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-blue-500"
+              className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-black"
             />
           </div>
           {errors.email && (
             <p className={`text-xs text-red-600`}>{errors.email._errors[0]}</p>
           )}
 
-           <div className="country">
-                <label className="block mb-1 font-bold text-gray-500">Country</label>
+           <div className="country">  
+                <label className="block mb-1 font-bold text-black">Country</label>
                 <input
                         type="text"
                         value={signupData.country}
                         onChange={handleCountryChange}
-                        className="ageInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-blue-500"
+                        className="ageInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-black"
                     />
                     {filteredCountries.length > 0 && (
                         <ul className="absolute z-10 bg-white border border-gray-300 rounded-md  mt-1 max-h-60 overflow-y-auto">
@@ -237,8 +176,8 @@ const RegisterForm = () => {
             </p>
           )} 
           <div className="">
-            <label className="block mb-1 font-bold text-gray-500">Age</label>
-            <div className="ageInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-blue-500 ">
+            <label className="block mb-1 font-bold text-black">Age</label>
+            <div className="ageInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-black ">
               <input
                 onChange={(e) => {
                   setSignupData({ ...signupData, age: e.target.value });
@@ -252,10 +191,10 @@ const RegisterForm = () => {
             <p className={`text-xs text-red-600`}>{errors.age._errors[0]}</p>
           )}
           <div className="">
-            <label className="block mb-1 font-bold text-gray-500">
+            <label className="block mb-1 font-bold text-black">
               Children
             </label>
-            <div className="passwordInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-blue-500 ">
+            <div className="passwordInput flex justify-between w-full border-2 bg-white border-gray-200 p-3 rounded outline-none focus-within:border-black ">
               <input
                 onChange={(e) => {
                   setSignupData({ ...signupData, children: e.target.value });
@@ -273,7 +212,7 @@ const RegisterForm = () => {
           <button
             type="submit"
             disabled={loading}
-            className=" w-full disabled:cursor-not-allowed bg-gradient-to-r from-[#F27104]  to-[#FFCB18] hover:bg-yellow-300 p-4 rounded text-black hover:font-bold hover:translate-y-2  transition-all ease-in duration-500"
+            className=" w-full disabled:cursor-not-allowed bg-black p-4 rounded text-white text-lg font-bold hover:translate-y-2  transition-all ease-in duration-500"
           >
             {loading ? <Loader /> : "Register"}
           </button>

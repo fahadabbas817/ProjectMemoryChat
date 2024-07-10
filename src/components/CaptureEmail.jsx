@@ -1,15 +1,16 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Loader from './Loader'
 import { z } from 'zod'
 import { toast } from 'sonner'
-
 import { useNavigate } from 'react-router-dom'
 import { ChatContext } from './ChatContext'
-
 const CaptureEmail = () => {
-
 const {earlyAccessEmail, setEarlyAccessEmail} = useContext(ChatContext)
+
+useEffect(()=>{
+  setEarlyAccessEmail("")
+},[])
    
     const [errors, setErrors] = useState({})
     const [loading, setLoading] = useState(false)
@@ -31,7 +32,7 @@ const {earlyAccessEmail, setEarlyAccessEmail} = useContext(ChatContext)
         }else{
           const formattedErrors = emailCheck.error.format();
           setErrors(formattedErrors)
-          console.log(errors)
+          
           setLoading(false)
         }
    

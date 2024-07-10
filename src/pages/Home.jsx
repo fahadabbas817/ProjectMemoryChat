@@ -1,18 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
 import BottomComponent from "../components/BottomComponent";
 import MobileSection from "../components/MobileSection";
 import HeroSection from "@/components/HeroSection";
 import SocialShare from "@/components/SocialShare";
 
-
-
-
 const Home = () => {
   
-
-  
- 
   return (
   
       <div className="mainHomePage min-w-80 md:h-screen w-full bg-[url('./assets/blue_circles-min.png')] bg-[length:60rem]  bg-top md:bg-top bg-no-repeat bg-[#001C3C] md:bg-transparent  relative">
