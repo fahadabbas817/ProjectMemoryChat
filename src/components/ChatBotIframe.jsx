@@ -13,7 +13,7 @@ const ChatBotIframe = () => {
     <div className="relative w-full h-[280px]">
       <iframe
         className={`w-full h-full`}
-        src={`${import.meta.env.VITE_CHATBOT_SITE_URL}/?lang=${currentLanguageCode}`}
+        src={`https://infeelit.vercel.app/?lang=${currentLanguageCode}`}
         allow="microphone"
         allowFullScreen
       ></iframe>
