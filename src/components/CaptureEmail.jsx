@@ -37,7 +37,7 @@ const CaptureEmail = () => {
   };
 
   return (
-    <div className="EarlyAccessBtn   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
+    <div className="EarlyAccessBtn captureemail   flex justify-between  text-sm text-black  bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] w-full px-5  py-1  rounded-2xl cursor-pointer mx-auto shadow-xl hover:px-4 hover:ring-2 hover:ring-slate-900 transition-all ease-in duration-200">
       <div className="earlyAccesText  text-black">
         <p className=" launchDate text-lg font-bold text-white">
           {t("coming")}
