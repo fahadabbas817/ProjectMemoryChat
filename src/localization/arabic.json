@@ -10,11 +10,11 @@
   "joinNow": "اشترك الآن للحصول على الوصول المبكر والمكافآت الحصرية",
   "meanwhileShare": "في هذه الأثناء، شارك ذكرى مميزة وحولها إلى صورة فريدة",
   "placeholdertext": "لنستذكر اللحظات المميزة",
-  "presentaionLink":"عرض الفيديو & الميزات",
+  "presentaionLink": "عرض الفيديو & الميزات",
   "terms": " الشروط والأحكام",
   "privacy": "سياسة الخصوصية",
   "coming": "تاريخ الإطلاق",
-  "summer2024":"صيف 2024",
+  "summer2024": "مايو 2025",
   "days": "يوم",
   "min": "دقائق",
   "hours": "ساعات",
@@ -22,9 +22,20 @@
   "getEarlyAccess": "تمتع بالوصول المبكر",
   "enterEmail": "لبريد الإلكتروني",
   "leftimg": "/thumbnails/arabicLeftImg.png",
+  "tokkenBanner": "/thumbnails/arabic.png",
   "rightimg": "/thumbnails/arabicRightImg.png",
   "leftImgLink": "https://youtu.be/HWUuJGLpbBI",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/vvHHS0U-2fQ",
+
+  "registrationForm": {
+    "name": "الاسم",
+    "country": "البلد",
+    "familyMembersCount": "عدد أفراد العائلة",
+    "age": "العمر",
+    "register": "تسجيل",
+    "email": "البريد الإلكتروني"
+  },
+
   "termsOfService": {
     "title": "شروط الخدمة",
     "lastUpdated": "آخر تحديث: 8 يوليو 2024",

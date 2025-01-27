@@ -3,7 +3,8 @@ import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-
+// import { BiDonateHeart } from "react-icons/bi";
+import { RiTokenSwapLine } from "react-icons/ri";
 
 const Navbar = () => {
 
@@ -76,10 +77,17 @@ const Navbar = () => {
            
             <button
               onClick={() => navigate("/register")}
-              className=" flex items-center  text-[#001C3C] bg-gradient-to-r from-[#449395] to-[#73F7FB] text-center text-xs md:text-sm font-bold md:py-2 md:px-8 py-1 px-4 rounded-3xl hover:ring-2  hover:ring-slate-100 transition ease-in duration-150"
+              className=" items-center flex  text-[#001C3C] bg-gradient-to-r from-[#449395] to-[#73F7FB] text-center text-xs md:text-sm font-bold min-w-8 md:py-2 md:px-8 py-1 px-4 rounded-3xl hover:ring-2  hover:ring-slate-100 transition ease-in duration-150"
             >
               Sign Up
             </button>
+            {/* <button
+              // onClick={() => navigate("/register")}
+              className=" flex items-center gap-2  text-[#001C3C] bg-gradient-to-tr from-[#F27104]  to-[#FFCB18] text-center text-xs md:text-sm font-bold min-w-8 md:py-2 md:px-6 py-1 px-4 rounded-3xl hover:ring-2  hover:ring-slate-100 transition ease-in duration-150"
+            >
+              <RiTokenSwapLine className="text-xl"/>
+             <span>Buy</span>
+            </button> */}
           </div>
       </div>
     </div>

@@ -15,7 +15,8 @@
   "terms": "नियम और शर्तें",
   "privacy": "गोपनीयता नीति",
   "coming": "लॉन्च तिथि",
-  "summer2024":"ग्रीष्म 2024",
+  "summer2024":"मई 2025",
+  "tokkenBanner": "/thumbnails/hindi.png",
   "days": "दिन",
   "min": "मिनट",
   "hours": "घंटे",
@@ -25,7 +26,17 @@
   "leftimg": "/thumbnails/hindiLeftImg.png",
   "rightimg": "/thumbnails/hindiRightImg.png",
   "leftImgLink": "https://youtu.be/xClVQhcEFSw",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/-OdLsx631bE",
+
+  "registrationForm": {
+      "name": "नाम",
+      "country": "देश",
+      "familyMembersCount": "परिवार के सदस्यों की संख्या",
+      "age": "आयु",
+      "register": "रजिस्टर करें",
+      "email": "ईमेल"
+    },
+
   "termsOfService": {
     "title": "सेवा की शर्तें",
     "lastUpdated": "अंतिम अपडेट: 8 जुलाई, 2024",

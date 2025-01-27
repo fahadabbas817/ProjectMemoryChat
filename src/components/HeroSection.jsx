@@ -3,13 +3,11 @@ import { assets } from "@/assets/assets";
 
 import { useTranslation } from "react-i18next";
 
-
-  
 const HeroSection = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const heroText = t("heroText",{returnObjects: true})
+  const heroText = t("heroText", { returnObjects: true });
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroText.length);
@@ -17,10 +15,6 @@ const HeroSection = () => {
 
     return () => clearInterval(intervalId);
   }, []);
-
- 
-
-  
 
   return (
     <>

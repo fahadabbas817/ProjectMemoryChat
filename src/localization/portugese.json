@@ -10,11 +10,12 @@
   "joinNow": "Cadastre-se para acesso antecipado e recompensas",
   "meanwhileShare": "Enquanto isso, compartilhe uma lembrança especial e veja-a se transformar em uma imagem única",
   "placeholdertext": "Vamos relembrar momentos preciosos",
-  "presentaionLink":"Ver vídeos & funções",
+  "presentaionLink": "Ver vídeos & funções",
   "terms": "Termos e Serviços",
   "privacy": "Política de Privacidade",
   "coming": "Lançamento",
-  "summer2024":"Verão 2024",
+  "summer2024": "Maio 2025",
+  "tokkenBanner": "/thumbnails/portugese.png",
   "days": "Dia",
   "min": "Minutos",
   "hours": "Horas",
@@ -24,7 +25,17 @@
   "leftimg": "/thumbnails/portugeseLeftImg.png",
   "rightimg": "/thumbnails/portugeseRightImg.png",
   "leftImgLink": "https://youtu.be/Nkf9HLtSXl4",
-  "rightImgLink":" ",
+  "rightImgLink": "https://youtu.be/Msm42HpqBI8",
+
+  "registrationForm": {
+    "name": "Nome e sobrenome",
+    "country": "País de origem  ",
+    "familyMembersCount": "Número de membros da família",
+    "age": "Idade",
+    "register": "Registrar",
+    "email": "Email"
+  },
+
   "termsOfService": {
     "title": "Termos de Serviço",
     "lastUpdated": "Última atualização: 8 de julho de 2024",

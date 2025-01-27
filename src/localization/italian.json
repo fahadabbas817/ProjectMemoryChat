@@ -15,7 +15,8 @@
   "terms": "Termini e condizioni",
   "privacy": "Informativa sulla privacy",
   "coming": "Data di Lancio",
-  "summer2024":"Estate 2024",
+  "summer2024":"Maggio 2025",
+  "tokkenBanner": "/thumbnails/hindi.png",
   "days": "Giorni",
   "min": "Minuti",
   "hours": "Ore",
@@ -25,7 +26,16 @@
   "leftimg": "/thumbnails/italianLeftImg.png",
   "rightimg": "/thumbnails/italianRightImg.png",
   "leftImgLink": "https://youtu.be/GJ9CBMkDYxs",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/nPjhc-Z5rfk",
+
+  "registrationForm": {
+      "name": "Nome",
+      "country": "Paese",
+      "familyMembersCount": "Numero di membri della famiglia",
+      "age": "Età",
+      "register": "Registrare",
+      "email": "Email"
+    },
 
   "termsOfService": {
     "title":"Termini di servizio",

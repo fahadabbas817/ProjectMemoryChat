@@ -10,11 +10,12 @@
   "joinNow": "Rejoignez-nous pour accès anticipé et récompenses",
   "meanwhileShare": "En attendant, partagez un souvenir émouvant et regardez-le se transformer en une image unique.",
   "placeholdertext": "Explorons vos plus beaux souvenirs",
-  "presentaionLink":"Voir vidéos & fonctionnalités",
+  "presentaionLink": "Voir vidéos & fonctionnalités",
   "terms": "Conditions d'utilisation",
   "privacy": "Politique de confidentialité",
   "coming": "Lancement",
-  "summer2024":"Été 2024",
+  "tokkenBanner": "/thumbnails/french.png",
+  "summer2024": "Mai 2025",
   "days": "Jour",
   "min": "Minutes",
   "hours": "Heures",
@@ -24,10 +25,19 @@
   "leftimg": "/thumbnails/frenchLeftImg.png",
   "rightimg": "/thumbnails/frenchRightImg.png",
   "leftImgLink": "https://youtu.be/xk-5eLgobSM",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/DC7C1QVoqls",
+
+  "registrationForm": {
+    "name": "Nom",
+    "country": "Pays d'origine",
+    "familyMembersCount": "Nombre de membres de la famille",
+    "age": "Âge",
+    "register": "S'inscrire",
+    "email": "Email"
+  },
 
   "termsOfService": {
-    "title":"Conditions d'utilisation",
+    "title": "Conditions d'utilisation",
     "lastUpdated": "Dernière mise à jour : 8 juillet 2024",
     "sections": {
       "acceptanceOfTerms": {

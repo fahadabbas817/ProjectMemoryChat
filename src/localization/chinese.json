@@ -10,11 +10,12 @@
   "joinNow": "立即加入，享受独家抢先体验和奖励",
   "meanwhileShare": "与此同时，分享您的美好回忆或珍贵时刻，并将其转化为独一无二的图像",
   "placeholdertext": "让我们一起铭记珍贵时刻",
-  "presentaionLink":"查看视频 & 功能",
+  "presentaionLink": "查看视频 & 功能",
+  "tokkenBanner": "/thumbnails/chinese.png",
   "terms": "条款和服务",
   "privacy": "隐私政策",
   "coming": "发布日期",
-  "summer2024":"夏季 2024",
+  "summer2024": "2025年5月",
   "days": "天",
   "min": "分钟",
   "hours": "小时",
@@ -24,7 +25,17 @@
   "leftimg": "/thumbnails/chineseLeftImg.png",
   "rightimg": "/thumbnails/chineseRightImg.png",
   "leftImgLink": "https://youtu.be/jUa31-pu2kc ",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/zP83fmnNkz8",
+
+  "registrationForm": {
+    "name": "姓名",
+    "country": "国家",
+    "familyMembersCount": "家庭成员数",
+    "age": "年龄",
+    "register": "注册",
+    "email": "电子邮件"
+  },
+
   "termsOfService": {
     "title": "服务条款",
     "lastUpdated": "最后更新 2024 年 7 月 8 日",
@@ -95,7 +106,6 @@
       },
       "severabilityAndWaiver": {
         "title": "可分割性和弃权"
-       
       },
       "severability": {
         "title": "可分割性",
@@ -109,7 +119,7 @@
         "title": "翻译解释",
         "content": "如果我们在我们的服务中向您提供这些条款和条件，则这些条款和条件可能已被翻译。您同意在发生争议时以英文原文为准。"
       },
-      
+
       "contactInformation": {
         "title": "联系信息",
         "content": "如对本条款有任何疑问或意见，请通过 legal@infeelit.com 与我们联系。"

@@ -17,11 +17,14 @@ import Menu from './Menu.svg'
 import Share from './Share.png'
 import whatsapp from './whatsapp.png'
 import telegram from './telegram.png'
+import tokkenBanner from './tokkenBanner.png'
+import tokkenBanner2 from './tokkenBanner2.png'
 
 
 export const assets={
-   
     
+   tokkenBanner2,
+    tokkenBanner, 
     telegram,
     whatsapp,
     Share,

@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
   const privacyPolicy = t('privacyPolicy', { returnObjects: true });
   
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white p-4">
+    <div className="flex animate-fadeInTop justify-center items-center min-h-screen bg-white p-4">
       <div className="w-full max-w-4xl bg-white text-black p-8 rounded-lg">
         <section className="introduction">
           <h1 className="text-3xl font-bold mb-4">{privacyPolicy.title}</h1>

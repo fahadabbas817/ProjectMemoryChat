@@ -10,11 +10,12 @@
   "joinNow": "Присоединяйтесь сейчас для преддоступа и предложений",
   "meanwhileShare": "Тем временем, поделитесь воспоминанием или моментом и увидьте, как он станет уникальным изображением",
   "placeholdertext": "Давайте сохраним ваш трогательный момент",
-  "presentaionLink":"Смотреть видео & функции",
+  "presentaionLink": "Смотреть видео & функции",
   "terms": "правила и условия",
   "privacy": "Политика приватности",
   "coming": "Дата запуска",
-  "summer2024":"Лето 2024",
+  "summer2024": "Май 2025",
+  "tokkenBanner": "/thumbnails/russian.png",
   "days": "День",
   "min": "Минуты",
   "hours": "Часы",
@@ -24,7 +25,17 @@
   "leftimg": "/thumbnails/russianLeftImg.png",
   "rightimg": "/thumbnails/russianRightImg.png",
   "leftImgLink": "https://youtu.be/D529iAr3vdg",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/TexKx61UCtk",
+
+  "registrationForm": {
+    "name": "Имя",
+    "country": "Страна",
+    "familyMembersCount": "Количество членов семьи",
+    "age": "Возраст",
+    "register": "Регистрация",
+    "email": "Электронная почта"
+  },
+
   "termsOfService": {
     "title": "Условия предоставления услуг",
     "lastUpdated": "Последнее обновление: 8 июля 2024 г.",
@@ -404,7 +415,4 @@
       }
     }
   }
-  
-
-  
 }

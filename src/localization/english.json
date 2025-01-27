@@ -8,13 +8,14 @@
   ],
   "infeelitIntoText": "Hi, I am Infeelit - Your assistant for immortalizing and sharing your most cherished moments",
   "joinNow": "Join Now for Early Access and Rewards",
-  "meanwhileShare": "Meanwhile Share a heartfelt memory or a treasured moment and see it transformed into a unique image",
+  "meanwhileShare": "Join the Revolution of Memories with Infeelit Coin",
   "placeholdertext": "Let's Remember Cherished Moments",
-  "presentaionLink":"View Intro Videos and Features",
+  "presentaionLink": "View Intro Videos and Features",
   "terms": "Terms and Services",
+  "tokkenBanner": "/thumbnails/english.png",
   "privacy": "Privacy Policy",
   "coming": "LAUNCH DATE",
-  "summer2024":"SUMMER 2024",
+  "summer2024": "May 2025",
   "days": "Day",
   "min": "Minutes",
   "hours": "Hours",
@@ -24,8 +25,16 @@
   "leftimg": "/thumbnails/englishLeftImg.png",
   "rightimg": "/thumbnails/englishRightImg.png",
   "leftImgLink": "https://youtu.be/mXAuINbfQzM",
-  "rightImgLink": "",
+  "rightImgLink": "https://youtu.be/h8IGJmy11bE",
 
+  "registrationForm": {
+    "name": "Name",
+    "country": "Country",
+    "familyMembersCount": "Family Members Count",
+    "age": "Age",
+    "register": "Register",
+    "email": "Email"
+  },
 
   "termsOfService": {
     "title": "Terms and Services",
@@ -99,13 +108,13 @@
         "title": "Severability and Waiver"
       },
       "severability": {
-          "title": "Severability",
-          "content": "If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect."
-        },
-        "waiver": {
-          "title": "Waiver",
-          "content": "Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach."
-        },
+        "title": "Severability",
+        "content": "If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect."
+      },
+      "waiver": {
+        "title": "Waiver",
+        "content": "Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach."
+      },
       "translationInterpretation": {
         "title": "Translation Interpretation",
         "content": "These Terms and Conditions may have been translated if we have made them available to you on our Service. You agree that the original English text shall prevail in the case of a dispute."
@@ -116,7 +125,6 @@
       }
     }
   },
-
 
   "privacyPolicy": {
     "title": "Privacy Policy",
@@ -132,51 +140,51 @@
       },
       "definitions": {
         "title": "Definitions",
-        "list":{
-          "text1":{
-          "title":"Service",
-          "content":" refers to the pre-launch landing page and chatbot operated by InFeelit, Inc."
+        "list": {
+          "text1": {
+            "title": "Service",
+            "content": " refers to the pre-launch landing page and chatbot operated by InFeelit, Inc."
           },
-          "text2":{
-          "title":"Account",
-          "content":"means a unique account created for you to access our Service or parts of our Service."
+          "text2": {
+            "title": "Account",
+            "content": "means a unique account created for you to access our Service or parts of our Service."
           },
-          "text3":{
-          "title":"Company",
-          "content":" (referred to as either \"the Company\", \"We\", \"Us\" or \"Our\" in this Agreement) refers to InFeelit, Inc."
+          "text3": {
+            "title": "Company",
+            "content": " (referred to as either \"the Company\", \"We\", \"Us\" or \"Our\" in this Agreement) refers to InFeelit, Inc."
           },
-          "text4":{
-          "title":"Cookies",
-          "content":"are small files that are placed on your computer, mobile device, or any other device by a website, containing the details of your browsing history on that website among its many uses."
+          "text4": {
+            "title": "Cookies",
+            "content": "are small files that are placed on your computer, mobile device, or any other device by a website, containing the details of your browsing history on that website among its many uses."
           },
-          "text5":{
-          "title":"Country",
-          "content":"refers to the specific country where the user resides."
+          "text5": {
+            "title": "Country",
+            "content": "refers to the specific country where the user resides."
           },
-          "text6":{
-          "title":"Data Controller",
-          "content":" for the purposes of the GDPR, refers to the Company as the legal person which alone or jointly with others determines the purposes and means of the processing of personal data."
+          "text6": {
+            "title": "Data Controller",
+            "content": " for the purposes of the GDPR, refers to the Company as the legal person which alone or jointly with others determines the purposes and means of the processing of personal data."
           },
-          "text7":{
-          "title":"Device",
-          "content":"means any device that can access the Service such as a computer, a cellphone, or a digital tablet."
+          "text7": {
+            "title": "Device",
+            "content": "means any device that can access the Service such as a computer, a cellphone, or a digital tablet."
           },
-          "text8":{
-          "title":"Personal Data",
-          "content":"is any information that relates to an identified or identifiable individual. For the purposes of GDPR, Personal Data means any information relating to you such as a name, an identification number, location data, online identifier, or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural, or social identity."
+          "text8": {
+            "title": "Personal Data",
+            "content": "is any information that relates to an identified or identifiable individual. For the purposes of GDPR, Personal Data means any information relating to you such as a name, an identification number, location data, online identifier, or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural, or social identity."
           },
-          "text9":{
-          "title":"Service Provider",
-          "content":"means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service, or to assist the Company in analyzing how the Service is used."
+          "text9": {
+            "title": "Service Provider",
+            "content": "means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service, or to assist the Company in analyzing how the Service is used."
           },
-          "text10":{
-          "title":"Usage Data",
-          "content":"refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit)."
+          "text10": {
+            "title": "Usage Data",
+            "content": "refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit)."
           },
-          "text11":{
-          "title":"You",
-          "content":"means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable. Under GDPR, You can be referred to as the Data Subject or as the User as you are the individual using the Service."
-          }         
+          "text11": {
+            "title": "You",
+            "content": "means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable. Under GDPR, You can be referred to as the Data Subject or as the User as you are the individual using the Service."
+          }
         }
       }
     },
@@ -193,9 +201,9 @@
       "personalData": {
         "title": "Personal Data",
         "text1": "While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:",
-        "list":{
-          "text1":"Email Address",
-          "text2":"Name"
+        "list": {
+          "text1": "Email Address",
+          "text2": "Name"
         }
       },
       "usageData": {
@@ -320,94 +328,92 @@
       "title": "Security of Your Personal Data",
       "text": "The security of your personal data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security."
     },
-    "GPDRPrivacy":{
-      "title":"GPDR Privacy",
-      "legalBasisForProcessingPersonalData":{
-        "title":"Legal Basis for Processing Personal Data under GDPR",
-        "list":{
-          "text1":{
-            "title":"Performance of a contract:",
-            "content":"provision of personal data is necessary for the performance of an agreement with you and/or for any pre-contractual obligations thereof."
+    "GPDRPrivacy": {
+      "title": "GPDR Privacy",
+      "legalBasisForProcessingPersonalData": {
+        "title": "Legal Basis for Processing Personal Data under GDPR",
+        "list": {
+          "text1": {
+            "title": "Performance of a contract:",
+            "content": "provision of personal data is necessary for the performance of an agreement with you and/or for any pre-contractual obligations thereof."
           },
-          "text2":{
-            "title":"Consent : ",
-            "content":"you have given your consent for processing personal data for one or more specific purposes."
+          "text2": {
+            "title": "Consent : ",
+            "content": "you have given your consent for processing personal data for one or more specific purposes."
           },
-          "text3":{
-            "title":"Legal obligations: ",
-            "content":" processing personal data is necessary for compliance with a legal obligation to which the Company is subject."
+          "text3": {
+            "title": "Legal obligations: ",
+            "content": " processing personal data is necessary for compliance with a legal obligation to which the Company is subject."
           },
-          "text4":{
-            "title":"Vital interests: ",
-            "content":"processing personal data is necessary in order to protect your vital nterests or of another natural person."
+          "text4": {
+            "title": "Vital interests: ",
+            "content": "processing personal data is necessary in order to protect your vital nterests or of another natural person."
           },
-          "text5":{
-            "title":"Public interests: ",
-            "content":"processing personal data is related to a task that is carried out in the public interest or in the exercise of official authority vested in the Company."
+          "text5": {
+            "title": "Public interests: ",
+            "content": "processing personal data is related to a task that is carried out in the public interest or in the exercise of official authority vested in the Company."
           },
-          "text6":{
-            "title":"Legitimate interests:",
-            "content":"processing personal data is necessary for the purposes of the legitimate interests pursued by the Company."
+          "text6": {
+            "title": "Legitimate interests:",
+            "content": "processing personal data is necessary for the purposes of the legitimate interests pursued by the Company."
           },
-          "paragraphText":"In any case, the Company will gladly help to clarify the specific legal basis that applies to the processing, and in particular whether the provision of personal data is a statutory or contractual requirement, or a requirement necessary to enter into a contract."
+          "paragraphText": "In any case, the Company will gladly help to clarify the specific legal basis that applies to the processing, and in particular whether the provision of personal data is a statutory or contractual requirement, or a requirement necessary to enter into a contract."
         }
       }
     },
-    "rightsUnderGPDR":{
-      "title":"Your Rights under the GDPR",
-      "paraText":" The Company undertakes to respect the confidentiality of your personal data and to guarantee you can exercise your rights. You have the right under this Privacy Policy, and by law if you are within the EU, to:",
-      "list":{
-        "text1":{
-          "title":"Request access to your personal data :",
-          "content":"The right to access, update or delete the information we have on you. Whenever made possible, you can access, update or request deletion of your personal data directly within your account settings section. If you are unable to perform these actions yourself, please contact us to assist you. This also enables you to receive a copy of the personal data we hold about you."
+    "rightsUnderGPDR": {
+      "title": "Your Rights under the GDPR",
+      "paraText": " The Company undertakes to respect the confidentiality of your personal data and to guarantee you can exercise your rights. You have the right under this Privacy Policy, and by law if you are within the EU, to:",
+      "list": {
+        "text1": {
+          "title": "Request access to your personal data :",
+          "content": "The right to access, update or delete the information we have on you. Whenever made possible, you can access, update or request deletion of your personal data directly within your account settings section. If you are unable to perform these actions yourself, please contact us to assist you. This also enables you to receive a copy of the personal data we hold about you."
         },
-        "text2":{
-          "title":"Request correction of the personal data that we hold about you :",
-          "content":"You have the right to have any incomplete or inaccurate information we hold about you corrected."
+        "text2": {
+          "title": "Request correction of the personal data that we hold about you :",
+          "content": "You have the right to have any incomplete or inaccurate information we hold about you corrected."
         },
-        "text3":{
-          "title":"Object to processing of your personal data : ",
-          "content":"This right exists where we are relying on a legitimate interest as the legal basis for our processing and there is something about your articular situation which makes you want to object to our processing of your personal data on this ground. You also have the right to object where we are processing your personal data for direct marketing purposes."
+        "text3": {
+          "title": "Object to processing of your personal data : ",
+          "content": "This right exists where we are relying on a legitimate interest as the legal basis for our processing and there is something about your articular situation which makes you want to object to our processing of your personal data on this ground. You also have the right to object where we are processing your personal data for direct marketing purposes."
         },
-        "text4":{
-          "title":"Request erasure of your personal data : ",
-          "content":"You have the right to ask us to delete or remove personal data when there is no good reason for us to continue processing it."
+        "text4": {
+          "title": "Request erasure of your personal data : ",
+          "content": "You have the right to ask us to delete or remove personal data when there is no good reason for us to continue processing it."
         },
-        "text5":{
-          "title":"Request the transfer of your personal data :",
-          "content":"We will provide to you, or to a third-party you have chosen, your personal data in a structured, commonly used, machine-readable format. Please note that this right only applies to automated information which you initially provided consent for us to use or where we used the information to perform a contract with you."
+        "text5": {
+          "title": "Request the transfer of your personal data :",
+          "content": "We will provide to you, or to a third-party you have chosen, your personal data in a structured, commonly used, machine-readable format. Please note that this right only applies to automated information which you initially provided consent for us to use or where we used the information to perform a contract with you."
         },
-        "text6":{
-          "title":"Withdraw your consent :",
-          "content":"You have the right to withdraw your consent on using your personal data. If you withdraw your consent, we may not be able to provide you with access to certain specific functionalities of the Service."
+        "text6": {
+          "title": "Withdraw your consent :",
+          "content": "You have the right to withdraw your consent on using your personal data. If you withdraw your consent, we may not be able to provide you with access to certain specific functionalities of the Service."
         }
       }
     },
-    "GPDProtectionRights":{
-      "title":"Exercising of Your GDPR Data Protection Rights",
-      "paraText1":"You may exercise your rights of access, rectification, cancellation, and opposition by contacting us. Please note that we may ask you to verify your identity before responding to such requests. If you make a request, we will try our best to respond to you as soon as possible.",
-      "paraText2":" You have the right to complain to a Data Protection Authority about our collection and use of your personal data. For more information, if you are in the European Economic Area (EEA), please contact your local data protection authority in the EEA."
+    "GPDProtectionRights": {
+      "title": "Exercising of Your GDPR Data Protection Rights",
+      "paraText1": "You may exercise your rights of access, rectification, cancellation, and opposition by contacting us. Please note that we may ask you to verify your identity before responding to such requests. If you make a request, we will try our best to respond to you as soon as possible.",
+      "paraText2": " You have the right to complain to a Data Protection Authority about our collection and use of your personal data. For more information, if you are in the European Economic Area (EEA), please contact your local data protection authority in the EEA."
     },
-    "childrenPrivacy":{
-      "title":"Children's Privacy",
-      "paraText":"Our Service does not address anyone under the age of 13. We do not knowingly collect personal data from anyone under the age of 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us. If we become aware that we have collected personal data from anyone under the age of 13 without verification of parental consent, we take steps to remove that information from our servers."
+    "childrenPrivacy": {
+      "title": "Children's Privacy",
+      "paraText": "Our Service does not address anyone under the age of 13. We do not knowingly collect personal data from anyone under the age of 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us. If we become aware that we have collected personal data from anyone under the age of 13 without verification of parental consent, we take steps to remove that information from our servers."
     },
-    "linkToOtherWeb":{
-      "title":"Links to Other Websites",
-      "paraText":"Our Service may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services."
+    "linkToOtherWeb": {
+      "title": "Links to Other Websites",
+      "paraText": "Our Service may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services."
     },
-    "changesToPrivacyPolicy":{
-      "title":"Changes to this Privacy Policy",
-      "paraText":"We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the \"Last updated\" date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+    "changesToPrivacyPolicy": {
+      "title": "Changes to this Privacy Policy",
+      "paraText": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the \"Last updated\" date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
     },
-    "ContactUsSection":{
-      "title":"Contact Us",
-      "paraText":"If you have any questions about this Privacy Policy, you can contact us:",
-      "list":{
-        "text1":"By email:{\" \"}"
+    "ContactUsSection": {
+      "title": "Contact Us",
+      "paraText": "If you have any questions about this Privacy Policy, you can contact us:",
+      "list": {
+        "text1": "By email:{\" \"}"
       }
     }
-
   }
-  
 }
